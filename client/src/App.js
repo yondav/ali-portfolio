@@ -1,10 +1,10 @@
 import './App.css';
-import Contact from './components/contact';
+import Nav from './components/nav';
 
 function App() {
   return (
     <div className='App'>
-      <Contact />
+      <Nav />
     </div>
   );
 }
