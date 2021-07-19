@@ -1,0 +1,73 @@
+.header {
+  display: flex;
+  background-color: var(--pr-white);
+}
+
+.header-logo-cont {
+  display: flex;
+  justify-content: center;
+  padding: 0 3rem;
+}
+
+.header-logo {
+  content: url('../../assets/al-logo.svg');
+  width: 25rem;
+}
+
+.header-logo-white {
+  content: url('../../assets/al-logo-white.svg');
+  width: 25rem;
+}
+
+.header-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contrast {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contrast-icons {
+  padding: 1.5rem 0 0 2rem;
+  font-size: 1.2em;
+  color: var(--pr-grey);
+}
+
+.socials {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-icons {
+  padding: 1.5rem 2rem 0 0;
+  font-size: 1.2em;
+  color: var(--pr-grey);
+}
+
+.contrast-icons:hover,
+.contrast-icons:focus,
+.social-icons:hover,
+.social-icons:focus {
+  color: var(--pr-black);
+  transform: scale(1.02);
+}
+
+.contrast-icons:active,
+.social-icons:active {
+  color: var(--pr-black);
+  transform: scale(0.98);
+  /* transform: ; */
+}
+
+@media only screen and (min-width: 989px) {
+  .header-logo,
+  .header-logo-white {
+    padding: 3rem 0rem 2rem 0;
+  }
+
+  .social-icons {
+    font-size: 1.4em;
+  }
+}

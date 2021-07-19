@@ -1,77 +1,26 @@
-// import React from 'react';
-// import { makeStyles, withStyles } from '@material-ui/core/styles';
-// import Paper from '@material-ui/core/Paper';
-// import Tabs from '@material-ui/core/Tabs';
-// import Tab from '@material-ui/core/Tab';
-
-// const useStyles = makeStyles({
-//   root: {
-//     display: 'flex',
-//     justifyContent: 'center',
-//     // flexGrow: 1,
-//     textColor: '#333333',
-//     maxWidth: '100vw',
-//   },
-//   muiTabs: {
-//     maxWidth: '70vw',
-//   },
-//   indicator: {
-//     backgroundColor: '#333333',
-//   },
-// });
-
-// const Nav = () => {
-//   const classes = useStyles();
-//   const [value, setValue] = React.useState(0);
-
-//   const handleChange = (event, newValue) => {
-//     setValue(newValue);
-//   };
-
-//   return (
-//     <div className={classes.root}>
-//       <Tabs
-//         value={value}
-//         onChange={handleChange}
-//         classes={{
-//           indicator: classes.indicator,
-//           textColor: classes.textColor,
-//           muiTabs: classes.muiTabs,
-//         }}
-//         centered
-//       >
-//         <Tab label='Item One' />
-//         <Tab label='Item Two' />
-//         <Tab label='Item Three' />
-//         <Tab label='Item Four' />
-//       </Tabs>
-//     </div>
-//   );
-// };
-
-// export default Nav;
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Switch, Route, NavLink, useLocation } from 'react-router-dom';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
+import SwipeableViews from 'react-swipeable-views';
 
-const AntTabs = withStyles({
+const NavTabs = withStyles({
   root: {
     // borderBottom: '1px solid #e8e8e8',
   },
   indicator: {
-    backgroundColor: '#333333',
+    backgroundColor: 'var(--pr-black)',
   },
 })(Tabs);
 
-const AntTab = withStyles((theme) => ({
+const NavTab = withStyles((theme) => ({
   root: {
     textTransform: 'none',
     minWidth: 72,
     fontWeight: theme.typography.fontWeightRegular,
-    marginRight: '.8rem',
+    margin: ' 0 .8rem',
     fontFamily: [
       '-apple-system',
       'BlinkMacSystemFont',
@@ -112,21 +61,40 @@ const useStyles = makeStyles((theme) => ({
 
 const Nav = () => {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const [isMobile, setMobile] = useState(window.innerWidth < 460);
+  const [value, setValue] = useState(0);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+  const updateMedia = () => setMobile(window.innerWidth < 460);
+
+  const handleChange = (event, newValue) => setValue(newValue);
+
+  useEffect(() => {
+    window.addEventListener('resize', updateMedia);
+    return () => window.removeEventListener('resize', updateMedia);
+  });
 
   return (
     <div className={classes.root}>
       <div className={classes.demo1}>
-        <AntTabs value={value} onChange={handleChange} aria-label='ant example'>
-          <AntTab label='Tab 1' />
-          <AntTab label='Tab 2' />
-          <AntTab label='Tab 3' />
-          <AntTab label='Tab 4' />
-        </AntTabs>
+        {isMobile ? (
+          <SwipeableViews enableMouseEvents>
+            <NavTab label='Tab 1' component={NavLink} to='/' />
+            <NavTab label='Tab 2' component={NavLink} to='/tab_2' />
+            <NavTab label='Tab 3' component={NavLink} to='/tab_3' />
+            <NavTab label='Tab 4' component={NavLink} to='/tab_4' />
+          </SwipeableViews>
+        ) : (
+          <NavTabs
+            value={value}
+            onChange={handleChange}
+            aria-label='ant example'
+          >
+            <NavTab label='Tab 1' component={NavLink} to='/tab_2' />
+            <NavTab label='Tab 2' component={NavLink} to='/tab_2' />
+            <NavTab label='Tab 3' component={NavLink} to='/tab_3' />
+            <NavTab label='Tab 4' component={NavLink} to='/tab_4' />
+          </NavTabs>
+        )}
         <Typography className={classes.padding} />
       </div>
     </div>
