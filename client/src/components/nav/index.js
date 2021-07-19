@@ -7,9 +7,6 @@ import Typography from '@material-ui/core/Typography';
 import SwipeableViews from 'react-swipeable-views';
 
 const NavTabs = withStyles({
-  root: {
-    // borderBottom: '1px solid #e8e8e8',
-  },
   indicator: {
     backgroundColor: 'var(--pr-black)',
   },
@@ -34,6 +31,7 @@ const NavTab = withStyles((theme) => ({
       '"Segoe UI Symbol"',
     ].join(','),
     color: 'var(--pr-black)',
+    // transition: 'var(--ease',
     '&:hover': {
       color: 'var(--pr-grey)',
       opacity: 1,

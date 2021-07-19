@@ -7,9 +7,9 @@
   --ease: all 0.7s ease;
 }
 
-* {
+/* * {
   transition: var(--ease);
-}
+} */
 
 html {
   font-size: 14px;

@@ -1,6 +1,7 @@
 .header {
   display: flex;
   background-color: var(--pr-white);
+  transition: var(--ease);
 }
 
 .header-logo-cont {
@@ -33,6 +34,7 @@
   padding: 1.5rem 0 0 2rem;
   font-size: 1.2em;
   color: var(--pr-grey);
+  transition: var(--ease);
 }
 
 .socials {
@@ -44,6 +46,7 @@
   padding: 1.5rem 2rem 0 0;
   font-size: 1.2em;
   color: var(--pr-grey);
+  transition: var(--ease);
 }
 
 .contrast-icons:hover,
@@ -59,6 +62,40 @@
   color: var(--pr-black);
   transform: scale(0.98);
   /* transform: ; */
+}
+
+.to-white {
+  animation: to-white 3s forwards;
+  transition: var(--ease);
+}
+
+@keyframes to-white {
+  0% {
+    content: url('../../assets/al-logo-white.svg');
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100% {
+    content: url('../../assets/al-logo-white.svg');
+    transform: scale(1);
+  }
+}
+
+.to-black {
+  animation: to-black 3s forwards;
+  transition: var(--ease);
+}
+
+@keyframes to-black {
+  0% {
+    content: url('../../assets/al-logo.svg');
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100% {
+    content: url('../../assets/al-logo.svg');
+    transform: scale(1);
+  }
 }
 
 @media only screen and (min-width: 989px) {
