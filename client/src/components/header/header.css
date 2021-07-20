@@ -13,11 +13,13 @@
 .header-logo {
   content: url('../../assets/al-logo.svg');
   width: 25rem;
+  transition: var(--ease);
 }
 
-.header-logo-white {
-  content: url('../../assets/al-logo-white.svg');
-  width: 25rem;
+.header-logo:hover,
+.header-logo:focus,
+.header-logo:active {
+  transform: scale(1.1);
 }
 
 .header-icons {
@@ -61,7 +63,14 @@
 .social-icons:active {
   color: var(--pr-black);
   transform: scale(0.98);
-  /* transform: ; */
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--pr-white) !important;
+  z-index: 1;
 }
 
 .to-white {

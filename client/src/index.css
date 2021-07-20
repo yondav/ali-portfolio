@@ -5,6 +5,7 @@
   --pr-white: #fafafa;
   --off-white: #f1f1f1be;
   --ease: all 0.7s ease;
+  --shadow: rgba(0, 0, 0, 0.25) 0px 4px 16px;
 }
 
 /* * {

@@ -1,0 +1,28 @@
+.sticky-socials {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  background-color: var(--pr-white);
+  box-shadow: var(--shadow);
+}
+
+.sticky-icons {
+  margin: 0.5rem 0;
+  font-size: 1.2em;
+  color: var(--pr-grey);
+  transition: var(--ease);
+}
+
+.sticky-icons:hover,
+.sticky-icons:focus {
+  color: var(--pr-black);
+  transform: scale(1.05);
+}
+
+.sticky-icons:active {
+  color: var(--pr-black);
+  transform: scale(0.95);
+}

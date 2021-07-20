@@ -5,6 +5,7 @@ import {
   RiInstagramLine,
   RiContrastLine,
 } from 'react-icons/ri';
+import Nav from '../nav';
 import './header.css';
 
 const Header = () => {
@@ -28,31 +29,32 @@ const Header = () => {
   };
 
   return (
-    <header className='header'>
-      <Grid container spacing={0}>
-        <Grid item xs={12}>
-          <div className='header-icons'>
-            <div className='contrast'>
-              <RiContrastLine className='contrast-icons' onClick={updateMode} />
+    <div className='header-cont'>
+      <header className='header'>
+        <Grid container spacing={0}>
+          <Grid item xs={12}>
+            <div className='header-icons'>
+              <div className='contrast'>
+                <RiContrastLine
+                  className='contrast-icons'
+                  onClick={updateMode}
+                />
+              </div>
+              <div className='socials'>
+                <RiLinkedinFill className='social-icons' />
+                <RiInstagramLine className='social-icons' />
+              </div>
             </div>
-            <div className='socials'>
-              <RiLinkedinFill className='social-icons' />
-              <RiInstagramLine className='social-icons' />
+          </Grid>
+          <Grid item xs={12}>
+            <div className='header-logo-cont'>
+              <i className='header-logo to-black' />
             </div>
-          </div>
+          </Grid>
         </Grid>
-        <Grid item xs={12}>
-          <div className='header-logo-cont'>
-            <i className='header-logo to-black' />
-            {/* {!isDark ? (
-              <i className='header-logo' />
-            ) : (
-              <i className='header-logo-white' />
-            )} */}
-          </div>
-        </Grid>
-      </Grid>
-    </header>
+      </header>
+      <Nav />
+    </div>
   );
 };
 
