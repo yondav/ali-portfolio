@@ -41,8 +41,20 @@ const Header = () => {
                 />
               </div>
               <div className='socials'>
-                <RiLinkedinFill className='social-icons' />
-                <RiInstagramLine className='social-icons' />
+                <a
+                  href='https://www.linkedin.com/in/alison-lamb-a3173312/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <RiLinkedinFill className='social-icons' />
+                </a>
+                <a
+                  href='https://www.instagram.com/alilambop/?hl=en'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <RiInstagramLine className='social-icons' />
+                </a>
               </div>
             </div>
           </Grid>

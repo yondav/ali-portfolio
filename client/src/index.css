@@ -1,16 +1,13 @@
 :root {
-  --pr-black: #333333;
-  --pr-grey: #33333359;
+  --pr-black: #343434;
+  --pr-grey: #34343459;
   --emph-black: #111111;
-  --pr-white: #fafafa;
-  --off-white: #f1f1f1be;
+  --pr-white: #f4f4f4;
+  --off-white: #f4f4f4be;
   --ease: all 0.7s ease;
   --shadow: rgba(0, 0, 0, 0.25) 0px 4px 16px;
+  --radius: 0.3rem;
 }
-
-/* * {
-  transition: var(--ease);
-} */
 
 html {
   font-size: 14px;
@@ -23,15 +20,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--pr-black);
   background-color: var(--off-white);
+  /* overflow-x:hidden; */
 }
 
 .dark {
-  --pr-black: #fafafa;
-  --pr-grey: #f1f1f1be;
-  --emph-black: #fbf9f9;
-  --pr-white: #333333;
-  --off-white: #33333359;
+  --pr-white: #343434;
+  --off-white: #343434be;
+  --pr-black: #f4f4f4;
+  --pr-grey: #f4f4f4be;
+  --emph-black: #ffffff;
+  --pr-grey: #34343459;
 }
 
 code {

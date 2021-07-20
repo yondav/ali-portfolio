@@ -99,7 +99,7 @@ const NavTab = withStyles((theme) => ({
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: '1rem',
+    // padding: '1rem',
     display: 'flex',
     justifyContent: 'center',
     flexGrow: 1,
@@ -143,7 +143,7 @@ const Nav = () => {
             />
           </div>
           {isMobile ? (
-            <SwipeableViews enableMouseEvents>
+            <SwipeableViews enableMouseEvents style={{ width: '100vw' }}>
               <NavTab
                 label='Tab 1'
                 component={NavLink}
