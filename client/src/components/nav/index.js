@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Switch,
-  Route,
-  NavLink,
-  useLocation,
-  useRouteMatch,
-} from 'react-router-dom';
+import { Switch, Route, NavLink, useLocation } from 'react-router-dom';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -105,24 +99,19 @@ const Nav = () => {
   const classes = useStyles();
   const location = useLocation();
   const [isMobile, setMobile] = useState(window.innerWidth < 700);
-  let [value, setValue] = useState(0);
-  let newValue;
+  let page = location.pathname.substring(1);
+  console.log(page);
 
-  const tabNameToIndex = {
-    0: 'digital_design',
-    1: 'print_design',
-    2: 'graphic_design',
-    3: 'ui_ux',
-    4: 'information',
-  };
-
-  const indexToTabName = {
+  const indexToLocation = {
     digital_design: 0,
     print_design: 1,
     graphic_design: 2,
     ui_ux: 3,
     information: 4,
   };
+
+  let [value, setValue] = useState(indexToLocation[page]);
+  let newValue;
 
   const updateMedia = () => setMobile(window.innerWidth < 700);
 
