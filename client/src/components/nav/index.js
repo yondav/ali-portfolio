@@ -142,7 +142,11 @@ const Nav = () => {
             />
           </div>
           {isMobile ? (
-            <SwipeableViews enableMouseEvents style={{ width: '100vw' }}>
+            <SwipeableViews
+              enableMouseEvents
+              style={{ width: '100vw' }}
+              index={value}
+            >
               <NavTab
                 label='DIGITAL DESIGN'
                 component={NavLink}
