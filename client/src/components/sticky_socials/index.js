@@ -1,8 +1,12 @@
 import React from 'react';
-import { RiLinkedinFill, RiInstagramLine } from 'react-icons/ri';
+import {
+  RiLinkedinFill,
+  RiInstagramLine,
+  RiContrastLine,
+} from 'react-icons/ri';
 import './sticky_socials.css';
 
-const StickySocials = () => {
+const StickySocials = ({ updateMode }) => {
   return (
     <div className='sticky-socials'>
       <a
@@ -19,6 +23,9 @@ const StickySocials = () => {
       >
         <RiInstagramLine className='sticky-icons' />
       </a>
+      <div className='underline'>
+        <RiContrastLine className='sticky-icons' onClick={updateMode} />
+      </div>
     </div>
   );
 };

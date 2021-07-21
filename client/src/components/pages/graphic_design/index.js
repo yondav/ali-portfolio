@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const TabThree = ({ pageVariants, pageStyle, pageTransition }) => {
+const GraphicDesign = ({ pageVariants, pageStyle, pageTransition }) => {
   return (
     <motion.div
       style={pageStyle}
@@ -43,4 +43,4 @@ const TabThree = ({ pageVariants, pageStyle, pageTransition }) => {
   );
 };
 
-export default TabThree;
+export default GraphicDesign;

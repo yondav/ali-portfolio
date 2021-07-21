@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const TabFour = ({ pageVariants, pageStyle, pageTransition }) => {
+const UIUX = ({ pageVariants, pageStyle, pageTransition }) => {
   return (
     <motion.div
       style={pageStyle}
@@ -241,4 +241,4 @@ const TabFour = ({ pageVariants, pageStyle, pageTransition }) => {
   );
 };
 
-export default TabFour;
+export default UIUX;

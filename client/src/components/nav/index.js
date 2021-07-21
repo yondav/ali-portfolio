@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Switch, Route, NavLink, useLocation } from 'react-router-dom';
+import {
+  Switch,
+  Route,
+  NavLink,
+  useLocation,
+  useRouteMatch,
+} from 'react-router-dom';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import SwipeableViews from 'react-swipeable-views';
-import { TabOne, TabTwo, TabThree, TabFour } from '../pages';
+import { DigitalDesign, PrintDesign, GraphicDesign, UIUX } from '../pages';
 import { AnimatePresence } from 'framer-motion';
 
 let variants;
@@ -66,22 +72,10 @@ const NavTab = withStyles((theme) => ({
   root: {
     textTransform: 'none',
     minWidth: 72,
-    fontWeight: theme.typography.fontWeightRegular,
     margin: ' 0 .8rem',
-    fontFamily: [
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(','),
+    fontFamily: ['Jost', 'sans-serif'].join(','),
+    fontSize: window.innerWidth > 989 ? '1.125em' : '1em',
     color: 'var(--pr-black)',
-    // transition: 'var(--ease',
     '&:hover': {
       color: 'var(--pr-grey)',
       opacity: 1,
@@ -99,10 +93,10 @@ const NavTab = withStyles((theme) => ({
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // padding: '1rem',
     display: 'flex',
     justifyContent: 'center',
     flexGrow: 1,
+    padding: '1rem',
     backgroundColor: 'var(--pr-white)',
   },
 }));
@@ -110,11 +104,27 @@ const useStyles = makeStyles((theme) => ({
 const Nav = () => {
   const classes = useStyles();
   const location = useLocation();
-  const [isMobile, setMobile] = useState(window.innerWidth < 460);
+  const [isMobile, setMobile] = useState(window.innerWidth < 700);
   let [value, setValue] = useState(0);
   let newValue;
 
-  const updateMedia = () => setMobile(window.innerWidth < 460);
+  const tabNameToIndex = {
+    0: 'digital_design',
+    1: 'print_design',
+    2: 'graphic_design',
+    3: 'ui_ux',
+    4: 'information',
+  };
+
+  const indexToTabName = {
+    digital_design: 0,
+    print_design: 1,
+    graphic_design: 2,
+    ui_ux: 3,
+    information: 4,
+  };
+
+  const updateMedia = () => setMobile(window.innerWidth < 700);
 
   const handleChange = (event, newValue) => {
     newValue > value ? (variants = pageVariants) : (variants = pageVariantsAlt);
@@ -137,7 +147,7 @@ const Nav = () => {
             style={{ display: 'none', width: '100%', justifyContent: 'center' }}
           >
             <i
-              className='header-logo sticky-logo'
+              className='header-logo sticky-logo to-black'
               style={{ width: '2.5rem', cursor: 'pointer' }}
               onClick={handleScroll}
             />
@@ -145,9 +155,9 @@ const Nav = () => {
           {isMobile ? (
             <SwipeableViews enableMouseEvents style={{ width: '100vw' }}>
               <NavTab
-                label='Tab 1'
+                label='DIGITAL DESIGN'
                 component={NavLink}
-                to='/tab_1'
+                to='/digital_design'
                 onClick={(e) => {
                   newValue = 0;
                   newValue > value
@@ -157,9 +167,9 @@ const Nav = () => {
                 }}
               />
               <NavTab
-                label='Tab 2'
+                label='PRINT DESIGN'
                 component={NavLink}
-                to='/tab_2'
+                to='/print_design'
                 onClick={(e) => {
                   newValue = 1;
                   newValue > value
@@ -169,9 +179,9 @@ const Nav = () => {
                 }}
               />
               <NavTab
-                label='Tab 3'
+                label='GRAPHIC DESIGN'
                 component={NavLink}
-                to='/tab_3'
+                to='/graphic_design'
                 onClick={(e) => {
                   newValue = 2;
                   newValue > value
@@ -181,9 +191,21 @@ const Nav = () => {
                 }}
               />
               <NavTab
-                label='Tab 4'
+                label='UI/UX'
                 component={NavLink}
-                to='/tab_4'
+                to='/ui_ux'
+                onClick={(e) => {
+                  newValue = 3;
+                  newValue > value
+                    ? (variants = pageVariants)
+                    : (variants = pageVariantsAlt);
+                  setValue(newValue);
+                }}
+              />
+              <NavTab
+                label='INFORMATION'
+                component={NavLink}
+                to='/information'
                 onClick={(e) => {
                   newValue = 3;
                   newValue > value
@@ -199,10 +221,27 @@ const Nav = () => {
               onChange={handleChange}
               aria-label='nav tabs'
             >
-              <NavTab label='Tab 1' component={NavLink} to='/tab_1' />
-              <NavTab label='Tab 2' component={NavLink} to='/tab_2' />
-              <NavTab label='Tab 3' component={NavLink} to='/tab_3' />
-              <NavTab label='Tab 4' component={NavLink} to='/tab_4' />
+              <NavTab
+                label='DIGITAL DESIGN'
+                component={NavLink}
+                to='/digital_design'
+              />
+              <NavTab
+                label='PRINT DESIGN'
+                component={NavLink}
+                to='/print_design'
+              />
+              <NavTab
+                label='GRAPHIC DESIGN'
+                component={NavLink}
+                to='/graphic_design'
+              />
+              <NavTab label='UI/UX' component={NavLink} to='/ui_ux' />
+              <NavTab
+                label='INFORMATION'
+                component={NavLink}
+                to='/information'
+              />
             </NavTabs>
           )}
           <Typography className={classes.padding} />
@@ -210,29 +249,36 @@ const Nav = () => {
       </nav>
       <AnimatePresence>
         <Switch location={location} key={location.pathname}>
-          <Route path='/tab_1'>
-            <TabOne
+          <Route path='/digital_design'>
+            <DigitalDesign
               pageVariants={variants}
               pageStyle={pageStyle}
               pageTransition={pageTransition}
             />
           </Route>
-          <Route path='/tab_2'>
-            <TabTwo
+          <Route path='/print_design'>
+            <PrintDesign
               pageVariants={variants}
               pageStyle={pageStyle}
               pageTransition={pageTransition}
             />
           </Route>
-          <Route path='/tab_3'>
-            <TabThree
+          <Route path='/graphic_design'>
+            <GraphicDesign
               pageVariants={variants}
               pageStyle={pageStyle}
               pageTransition={pageTransition}
             />
           </Route>
-          <Route path='/tab_4'>
-            <TabFour
+          <Route path='/ui_ux'>
+            <UIUX
+              pageVariants={variants}
+              pageStyle={pageStyle}
+              pageTransition={pageTransition}
+            />
+          </Route>
+          <Route path='/information'>
+            <UIUX
               pageVariants={variants}
               pageStyle={pageStyle}
               pageTransition={pageTransition}

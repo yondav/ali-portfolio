@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import {
   RiLinkedinFill,
@@ -8,26 +8,7 @@ import {
 import Nav from '../nav';
 import './header.css';
 
-const Header = () => {
-  const [isDark, setDark] = useState(false);
-
-  const updateMode = () => {
-    const logo = document.querySelector('.header-logo');
-    if (!isDark) {
-      setDark(true);
-      logo.classList.contains('to-black')
-        ? logo.classList.replace('to-black', 'to-white')
-        : logo.classList.add('to-white');
-    } else {
-      setDark(false);
-      logo.classList.contains('to-white')
-        ? logo.classList.replace('to-white', 'to-black')
-        : logo.classList.add('to-black');
-    }
-
-    document.querySelector('body').classList.toggle('dark');
-  };
-
+const Header = ({ updateMode }) => {
   return (
     <div className='header-cont'>
       <header className='header'>

@@ -13,7 +13,7 @@
 .header-logo {
   content: url('../../assets/al-logo.svg');
   width: 90vw;
-  /* height: 65vh; */
+  padding: 1rem;
   transition: var(--ease);
 }
 
@@ -38,6 +38,7 @@
   font-size: 1.2em;
   color: var(--pr-grey);
   transition: var(--ease);
+  cursor: pointer;
 }
 
 .socials {
@@ -70,6 +71,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  font-size: 1em;
   background-color: var(--pr-white) !important;
   z-index: 1;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const TabTwo = ({ pageVariants, pageStyle, pageTransition }) => {
+const PrintDesign = ({ pageVariants, pageStyle, pageTransition }) => {
   return (
     <motion.div
       style={pageStyle}
@@ -33,4 +33,4 @@ const TabTwo = ({ pageVariants, pageStyle, pageTransition }) => {
   );
 };
 
-export default TabTwo;
+export default PrintDesign;
