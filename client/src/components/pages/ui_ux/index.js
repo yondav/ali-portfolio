@@ -1,244 +1,108 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+import { ui_ux } from '../../../data/ui_ux';
+import Thumbnail from '../../thumbnail';
 
-const UIUX = ({ pageVariants, pageStyle, pageTransition }) => {
+const DigitalDesign = ({ pageVariants, pageStyle, pageTransition }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    console.log(document.querySelector('.nav').offsetWidth);
+    console.log(isLoaded);
+    if (document.querySelector('.nav').offsetWidth) {
+      setIsLoaded(true);
+    }
+  }, [isLoaded]);
+
+  const useStyles = makeStyles((theme) => ({
+    root: {
+      // flexGrow: 1,
+      width: isLoaded && document.querySelector('.nav').offsetWidth,
+    },
+    grid: {
+      padding: theme.spacing(9),
+    },
+  }));
+
+  const classes = useStyles();
+
   return (
-    <motion.div
-      style={pageStyle}
-      className='row'
-      initial='initial'
-      animate='in'
-      exit='out'
-      variants={pageVariants}
-      transition={pageTransition}
-    >
-      <h1>TAB 4</h1>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora modi
-        voluptas at debitis facilis voluptatem ab quod, optio perspiciatis eius
-        impedit minima dolorem eos ex nam sunt est, accusantium numquam.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-        labore fuga cumque excepturi. Mollitia, ipsam? A fugiat, ea porro, dolor
-        error delectus nam explicabo aliquid nemo excepturi consequuntur fuga
-        consequatur!
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque alias
-        nulla unde quidem ratione, consequuntur, cupiditate eligendi ipsam rem
-        iusto dolorum? Earum, voluptates? Animi sint porro corporis aspernatur
-        ab esse quidem ex sit tenetur dolor, magnam, facilis, quia ea asperiores
-        temporibus quo molestiae repellat! Perspiciatis quisquam iusto quidem
-        libero repudiandae.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. A eum culpa
-        vero magni corporis repellat? Quasi quisquam neque, voluptatibus
-        praesentium velit porro odit temporibus quam aliquid deleniti itaque
-        corrupti.
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora modi
-        voluptas at debitis facilis voluptatem ab quod, optio perspiciatis eius
-        impedit minima dolorem eos ex nam sunt est, accusantium numquam.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-        labore fuga cumque excepturi. Mollitia, ipsam? A fugiat, ea porro, dolor
-        error delectus nam explicabo aliquid nemo excepturi consequuntur fuga
-        consequatur!
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque alias
-        nulla unde quidem ratione, consequuntur, cupiditate eligendi ipsam rem
-        iusto dolorum? Earum, voluptates? Animi sint porro corporis aspernatur
-        ab esse quidem ex sit tenetur dolor, magnam, facilis, quia ea asperiores
-        temporibus quo molestiae repellat! Perspiciatis quisquam iusto quidem
-        libero repudiandae.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. A eum culpa
-        vero magni corporis repellat? Quasi quisquam neque, voluptatibus
-        praesentium velit porro odit temporibus quam aliquid deleniti itaque
-        corrupti.
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora modi
-        voluptas at debitis facilis voluptatem ab quod, optio perspiciatis eius
-        impedit minima dolorem eos ex nam sunt est, accusantium numquam.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-        labore fuga cumque excepturi. Mollitia, ipsam? A fugiat, ea porro, dolor
-        error delectus nam explicabo aliquid nemo excepturi consequuntur fuga
-        consequatur!
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque alias
-        nulla unde quidem ratione, consequuntur, cupiditate eligendi ipsam rem
-        iusto dolorum? Earum, voluptates? Animi sint porro corporis aspernatur
-        ab esse quidem ex sit tenetur dolor, magnam, facilis, quia ea asperiores
-        temporibus quo molestiae repellat! Perspiciatis quisquam iusto quidem
-        libero repudiandae.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. A eum culpa
-        vero magni corporis repellat? Quasi quisquam neque, voluptatibus
-        praesentium velit porro odit temporibus quam aliquid deleniti itaque
-        corrupti.
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora modi
-        voluptas at debitis facilis voluptatem ab quod, optio perspiciatis eius
-        impedit minima dolorem eos ex nam sunt est, accusantium numquam.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-        labore fuga cumque excepturi. Mollitia, ipsam? A fugiat, ea porro, dolor
-        error delectus nam explicabo aliquid nemo excepturi consequuntur fuga
-        consequatur!
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque alias
-        nulla unde quidem ratione, consequuntur, cupiditate eligendi ipsam rem
-        iusto dolorum? Earum, voluptates? Animi sint porro corporis aspernatur
-        ab esse quidem ex sit tenetur dolor, magnam, facilis, quia ea asperiores
-        temporibus quo molestiae repellat! Perspiciatis quisquam iusto quidem
-        libero repudiandae.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. A eum culpa
-        vero magni corporis repellat? Quasi quisquam neque, voluptatibus
-        praesentium velit porro odit temporibus quam aliquid deleniti itaque
-        corrupti.
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora modi
-        voluptas at debitis facilis voluptatem ab quod, optio perspiciatis eius
-        impedit minima dolorem eos ex nam sunt est, accusantium numquam.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-        labore fuga cumque excepturi. Mollitia, ipsam? A fugiat, ea porro, dolor
-        error delectus nam explicabo aliquid nemo excepturi consequuntur fuga
-        consequatur!
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque alias
-        nulla unde quidem ratione, consequuntur, cupiditate eligendi ipsam rem
-        iusto dolorum? Earum, voluptates? Animi sint porro corporis aspernatur
-        ab esse quidem ex sit tenetur dolor, magnam, facilis, quia ea asperiores
-        temporibus quo molestiae repellat! Perspiciatis quisquam iusto quidem
-        libero repudiandae.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. A eum culpa
-        vero magni corporis repellat? Quasi quisquam neque, voluptatibus
-        praesentium velit porro odit temporibus quam aliquid deleniti itaque
-        corrupti.
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora modi
-        voluptas at debitis facilis voluptatem ab quod, optio perspiciatis eius
-        impedit minima dolorem eos ex nam sunt est, accusantium numquam.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-        labore fuga cumque excepturi. Mollitia, ipsam? A fugiat, ea porro, dolor
-        error delectus nam explicabo aliquid nemo excepturi consequuntur fuga
-        consequatur!
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque alias
-        nulla unde quidem ratione, consequuntur, cupiditate eligendi ipsam rem
-        iusto dolorum? Earum, voluptates? Animi sint porro corporis aspernatur
-        ab esse quidem ex sit tenetur dolor, magnam, facilis, quia ea asperiores
-        temporibus quo molestiae repellat! Perspiciatis quisquam iusto quidem
-        libero repudiandae.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. A eum culpa
-        vero magni corporis repellat? Quasi quisquam neque, voluptatibus
-        praesentium velit porro odit temporibus quam aliquid deleniti itaque
-        corrupti.
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora modi
-        voluptas at debitis facilis voluptatem ab quod, optio perspiciatis eius
-        impedit minima dolorem eos ex nam sunt est, accusantium numquam.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-        labore fuga cumque excepturi. Mollitia, ipsam? A fugiat, ea porro, dolor
-        error delectus nam explicabo aliquid nemo excepturi consequuntur fuga
-        consequatur!
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque alias
-        nulla unde quidem ratione, consequuntur, cupiditate eligendi ipsam rem
-        iusto dolorum? Earum, voluptates? Animi sint porro corporis aspernatur
-        ab esse quidem ex sit tenetur dolor, magnam, facilis, quia ea asperiores
-        temporibus quo molestiae repellat! Perspiciatis quisquam iusto quidem
-        libero repudiandae.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. A eum culpa
-        vero magni corporis repellat? Quasi quisquam neque, voluptatibus
-        praesentium velit porro odit temporibus quam aliquid deleniti itaque
-        corrupti.
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora modi
-        voluptas at debitis facilis voluptatem ab quod, optio perspiciatis eius
-        impedit minima dolorem eos ex nam sunt est, accusantium numquam.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-        labore fuga cumque excepturi. Mollitia, ipsam? A fugiat, ea porro, dolor
-        error delectus nam explicabo aliquid nemo excepturi consequuntur fuga
-        consequatur!
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque alias
-        nulla unde quidem ratione, consequuntur, cupiditate eligendi ipsam rem
-        iusto dolorum? Earum, voluptates? Animi sint porro corporis aspernatur
-        ab esse quidem ex sit tenetur dolor, magnam, facilis, quia ea asperiores
-        temporibus quo molestiae repellat! Perspiciatis quisquam iusto quidem
-        libero repudiandae.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. A eum culpa
-        vero magni corporis repellat? Quasi quisquam neque, voluptatibus
-        praesentium velit porro odit temporibus quam aliquid deleniti itaque
-        corrupti.
-      </p>
-    </motion.div>
+    <>
+      {isLoaded ? (
+        <motion.div
+          style={pageStyle}
+          className='row'
+          initial='initial'
+          animate='in'
+          exit='out'
+          variants={pageVariants}
+          transition={pageTransition}
+        >
+          <Box sx={{ flexGrow: 1 }} className={classes.root}>
+            <Grid
+              container
+              spacing={10}
+              style={{
+                margin: 0,
+                width: '100%',
+              }}
+            >
+              <Grid item xs={12}>
+                <Thumbnail
+                  source={ui_ux[0].thumbnail}
+                  alt={ui_ux[0].title}
+                  name={ui_ux[0].title}
+                  client={ui_ux[0].client}
+                  width='100%'
+                />
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Thumbnail
+                  source={ui_ux[1].thumbnail}
+                  alt={ui_ux[1].title}
+                  name={ui_ux[1].title}
+                  client={ui_ux[1].client}
+                  width='100%'
+                />
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Thumbnail
+                  source={ui_ux[2].thumbnail}
+                  alt={ui_ux[2].title}
+                  name={ui_ux[2].title}
+                  client={ui_ux[2].client}
+                  width='100%'
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <Thumbnail
+                  source={ui_ux[3].thumbnail}
+                  alt={ui_ux[3].title}
+                  name={ui_ux[3].title}
+                  client={ui_ux[3].client}
+                  width='100%'
+                />
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Thumbnail
+                  source={ui_ux[4].thumbnail}
+                  alt={ui_ux[4].title}
+                  name={ui_ux[4].title}
+                  client={ui_ux[4].client}
+                  width='100%'
+                />
+              </Grid>
+            </Grid>
+          </Box>
+        </motion.div>
+      ) : (
+        <h1>LOADING</h1>
+      )}
+    </>
   );
 };
 
-export default UIUX;
+export default DigitalDesign;

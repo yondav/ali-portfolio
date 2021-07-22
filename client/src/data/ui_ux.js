@@ -1,7 +1,8 @@
 export const ui_ux = [
+  // 0
   {
     title: 'Email Invite Kips Bay',
-    client: 'DLV',
+    client: ['DLV'],
     description: '',
     footer: '',
     tech: [],
@@ -11,9 +12,10 @@ export const ui_ux = [
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813786/ali/ui_ux/dlv_email_invite_kips_bay/Kips_Bay_DLV_Email_whgzfp.png',
     ],
   },
+  // 1
   {
     title: 'Invitation',
-    client: 'DLV',
+    client: ['DLV'],
     description: '',
     footer: '',
     tech: [],
@@ -26,9 +28,10 @@ export const ui_ux = [
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813819/ali/ui_ux/dlv_invitation/DLV_Invite_4_tdcrvo.jpg',
     ],
   },
+  // 2
   {
     title: 'DSM',
-    client: '',
+    client: [''],
     description: '',
     footer: '',
     tech: [],
@@ -43,9 +46,10 @@ export const ui_ux = [
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813845/ali/ui_ux/dsm/Typography_yvmanq.png',
     ],
   },
+  // 3
   {
     title: 'Email Subscription Floe',
-    client: 'Gro Intelligence',
+    client: ['Gro Intelligence'],
     description: '',
     footer: '',
     tech: [],
@@ -65,9 +69,10 @@ export const ui_ux = [
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813889/ali/ui_ux/email_subscription_flow_gro_intelligence/Free_to_paid_after_time_of_free_use_zkr6t0.png',
     ],
   },
+  // 4
   {
     title: 'Gated Webinar Content',
-    client: 'Gro Intelligence',
+    client: ['Gro Intelligence'],
     description: '',
     footer: '',
     tech: [],

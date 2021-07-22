@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Switch, Route, NavLink, useLocation } from 'react-router-dom';
+import {
+  Switch,
+  Route,
+  NavLink,
+  useLocation,
+  Redirect,
+} from 'react-router-dom';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -7,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import SwipeableViews from 'react-swipeable-views';
 import { DigitalDesign, PrintDesign, GraphicDesign, UIUX } from '../pages';
 import { AnimatePresence } from 'framer-motion';
+import './nav.css';
 
 let variants;
 
@@ -62,6 +69,18 @@ const NavTabs = withStyles({
   },
 })(Tabs);
 
+const slideStyles = {
+  root: {
+    height: 'calc(100% - 1rem)',
+    overflowX: 'auto',
+  },
+  slideContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    width: '100%',
+  },
+};
+
 const NavTab = withStyles((theme) => ({
   root: {
     textTransform: 'none',
@@ -90,6 +109,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     flexGrow: 1,
+    marginBottom: '2rem',
     padding: '1rem',
     backgroundColor: 'var(--pr-white)',
   },
@@ -130,7 +150,7 @@ const Nav = () => {
   return (
     <>
       <nav className={classes.root}>
-        <div className={classes.demo1}>
+        <div className='nav'>
           <div
             className='sticky-logo-cont'
             style={{ display: 'none', width: '100%', justifyContent: 'center' }}
@@ -144,7 +164,8 @@ const Nav = () => {
           {isMobile ? (
             <SwipeableViews
               enableMouseEvents
-              style={{ width: '100vw' }}
+              style={slideStyles.root}
+              slideStyle={slideStyles.slideContainer}
               index={value}
             >
               <NavTab
@@ -158,6 +179,7 @@ const Nav = () => {
                     : (variants = pageVariantsAlt);
                   setValue(newValue);
                 }}
+                // style={{ alignSelf: 'center' }}
               />
               <NavTab
                 label='PRINT DESIGN'
@@ -242,40 +264,54 @@ const Nav = () => {
       </nav>
       <AnimatePresence>
         <Switch location={location} key={location.pathname}>
+          <Route exact path='/'>
+            <Redirect to='/digital_design' />
+          </Route>
           <Route path='/digital_design'>
-            <DigitalDesign
-              pageVariants={variants}
-              pageStyle={pageStyle}
-              pageTransition={pageTransition}
-            />
+            <div className='page-wrap'>
+              <DigitalDesign
+                isMobile={isMobile}
+                pageVariants={variants}
+                pageStyle={pageStyle}
+                pageTransition={pageTransition}
+              />
+            </div>
           </Route>
           <Route path='/print_design'>
-            <PrintDesign
-              pageVariants={variants}
-              pageStyle={pageStyle}
-              pageTransition={pageTransition}
-            />
+            <div className='page-wrap'>
+              <PrintDesign
+                pageVariants={variants}
+                pageStyle={pageStyle}
+                pageTransition={pageTransition}
+              />
+            </div>
           </Route>
           <Route path='/graphic_design'>
-            <GraphicDesign
-              pageVariants={variants}
-              pageStyle={pageStyle}
-              pageTransition={pageTransition}
-            />
+            <div className='page-wrap'>
+              <GraphicDesign
+                pageVariants={variants}
+                pageStyle={pageStyle}
+                pageTransition={pageTransition}
+              />
+            </div>
           </Route>
           <Route path='/ui_ux'>
-            <UIUX
-              pageVariants={variants}
-              pageStyle={pageStyle}
-              pageTransition={pageTransition}
-            />
+            <div className='page-wrap'>
+              <UIUX
+                pageVariants={variants}
+                pageStyle={pageStyle}
+                pageTransition={pageTransition}
+              />
+            </div>
           </Route>
           <Route path='/information'>
-            <UIUX
-              pageVariants={variants}
-              pageStyle={pageStyle}
-              pageTransition={pageTransition}
-            />
+            <div className='page-wrap'>
+              <UIUX
+                pageVariants={variants}
+                pageStyle={pageStyle}
+                pageTransition={pageTransition}
+              />
+            </div>
           </Route>
         </Switch>
       </AnimatePresence>

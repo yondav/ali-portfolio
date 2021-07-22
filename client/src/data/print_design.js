@@ -1,7 +1,8 @@
 export const print_design = [
+  // 0
   {
     title: 'Postcards',
-    client: 'DLV',
+    client: ['DLV'],
     description: '',
     footer: '',
     tech: [],
@@ -17,22 +18,10 @@ export const print_design = [
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813175/ali/print_design/dlv_postcards/DLV_Postcard_7_mb7att.jpg',
     ],
   },
-  {
-    title: 'API Welcome Card',
-    client: 'Gro Intelligence',
-    description: '',
-    footer: '',
-    tech: [],
-    thumbnail:
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813213/ali/print_design/gro_intelligence_api_welcome_card/_api_invite_card_thumbnail_yzhboz.png',
-    gallery: [
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813213/ali/print_design/gro_intelligence_api_welcome_card/300_dpi_card_mock_front_b0slnd.png',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813213/ali/print_design/gro_intelligence_api_welcome_card/300_dpi_card_mock_back_cbjrax.png',
-    ],
-  },
+  // 1
   {
     title: 'Business Cards',
-    client: 'Gro Intelligence',
+    client: ['Gro Intelligence'],
     description: '',
     footer: '',
     tech: [],
@@ -43,9 +32,10 @@ export const print_design = [
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813268/ali/print_design/gro_intelligence_business_cards/Gro_Intelligence_Business_Cards_Working_Gro_Intelligence_Business_Card_Back_tdcgpu.png',
     ],
   },
+  // 2
   {
     title: 'Embroidery Sourcebook',
-    client: 'Holland and Sherry',
+    client: ['Holland and Sherry'],
     description: '',
     footer: '',
     tech: [],
@@ -62,24 +52,44 @@ export const print_design = [
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813372/ali/print_design/holland_and_sherry_embroidery_sourcebook/emb_spread9_cjb0z3.jpg',
     ],
   },
+  // 3
   {
-    title: 'Paxton Lookbook',
-    client: 'Holland and Sherry',
+    title: 'API Welcome Card',
+    client: ['Gro Intelligence'],
     description: '',
     footer: '',
     tech: [],
     thumbnail:
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813468/ali/print_design/holland_and_sherry_paxton_lookbook/_HS_paxton_Thumbnail_ylgttu.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813213/ali/print_design/gro_intelligence_api_welcome_card/_api_invite_card_thumbnail_yzhboz.png',
     gallery: [
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813468/ali/print_design/holland_and_sherry_paxton_lookbook/paxton_press_release_cover_ykd99w.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813468/ali/print_design/holland_and_sherry_paxton_lookbook/paxton_press_release_spreads2_q9ucjm.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813468/ali/print_design/holland_and_sherry_paxton_lookbook/paxton_press_release_spreads3_r8ggmg.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813468/ali/print_design/holland_and_sherry_paxton_lookbook/paxton_press_release_spreads4_icvonv.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813213/ali/print_design/gro_intelligence_api_welcome_card/300_dpi_card_mock_front_b0slnd.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813213/ali/print_design/gro_intelligence_api_welcome_card/300_dpi_card_mock_back_cbjrax.png',
     ],
   },
+  // 4
+  {
+    title: 'Outdoor Sourcebook',
+    client: ['Holland and Sherry'],
+    description: '',
+    footer: '',
+    tech: [],
+    thumbnail:
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813675/ali/print_design/holland_and_sherry_sourcebook/_HS_Outdoor_Sourcebook_Thumbnail_grrt6f.png',
+    gallery: [
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813675/ali/print_design/holland_and_sherry_sourcebook/Outdoor_Fabric_Sourcebook1_eadv08.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813674/ali/print_design/holland_and_sherry_sourcebook/Outdoor_Fabric_Sourcebook-spreads2_uufjex.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813675/ali/print_design/holland_and_sherry_sourcebook/Outdoor_Fabric_Sourcebook-spreads3_tcxxgz.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813675/ali/print_design/holland_and_sherry_sourcebook/Outdoor_Fabric_Sourcebook-spreads4_zdevyh.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813675/ali/print_design/holland_and_sherry_sourcebook/Outdoor_Fabric_Sourcebook-spreads5_flx5z0.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813675/ali/print_design/holland_and_sherry_sourcebook/Outdoor_Fabric_Sourcebook-spreads6_qkwubb.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813675/ali/print_design/holland_and_sherry_sourcebook/Outdoor_Fabric_Sourcebook-spreads7_rhcn0u.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813675/ali/print_design/holland_and_sherry_sourcebook/Outdoor_Fabric_Sourcebook-spreads8_akalb3.jpg',
+    ],
+  },
+  // 5
   {
     title: 'Rug Sourcebook',
-    client: 'Holland and Sherry',
+    client: ['Holland and Sherry'],
     description: '',
     footer: '',
     tech: [],
@@ -99,28 +109,26 @@ export const print_design = [
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813586/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread13_epe0ci.jpg',
     ],
   },
+  // 6
   {
-    title: 'Sourcebook',
-    client: 'Holland and Sherry',
+    title: 'Paxton Lookbook',
+    client: ['Holland and Sherry'],
     description: '',
     footer: '',
     tech: [],
     thumbnail:
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813675/ali/print_design/holland_and_sherry_sourcebook/_HS_Outdoor_Sourcebook_Thumbnail_grrt6f.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813468/ali/print_design/holland_and_sherry_paxton_lookbook/_HS_paxton_Thumbnail_ylgttu.png',
     gallery: [
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813675/ali/print_design/holland_and_sherry_sourcebook/Outdoor_Fabric_Sourcebook1_eadv08.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813674/ali/print_design/holland_and_sherry_sourcebook/Outdoor_Fabric_Sourcebook-spreads2_uufjex.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813675/ali/print_design/holland_and_sherry_sourcebook/Outdoor_Fabric_Sourcebook-spreads3_tcxxgz.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813675/ali/print_design/holland_and_sherry_sourcebook/Outdoor_Fabric_Sourcebook-spreads4_zdevyh.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813675/ali/print_design/holland_and_sherry_sourcebook/Outdoor_Fabric_Sourcebook-spreads5_flx5z0.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813675/ali/print_design/holland_and_sherry_sourcebook/Outdoor_Fabric_Sourcebook-spreads6_qkwubb.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813675/ali/print_design/holland_and_sherry_sourcebook/Outdoor_Fabric_Sourcebook-spreads7_rhcn0u.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813675/ali/print_design/holland_and_sherry_sourcebook/Outdoor_Fabric_Sourcebook-spreads8_akalb3.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813468/ali/print_design/holland_and_sherry_paxton_lookbook/paxton_press_release_cover_ykd99w.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813468/ali/print_design/holland_and_sherry_paxton_lookbook/paxton_press_release_spreads2_q9ucjm.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813468/ali/print_design/holland_and_sherry_paxton_lookbook/paxton_press_release_spreads3_r8ggmg.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813468/ali/print_design/holland_and_sherry_paxton_lookbook/paxton_press_release_spreads4_icvonv.jpg',
     ],
   },
+  // 7
   {
     title: 'WedYon',
-    client: '',
+    client: ['Personal'],
     description: '',
     footer: '',
     tech: [],
