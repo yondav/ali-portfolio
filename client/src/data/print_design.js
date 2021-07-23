@@ -3,9 +3,9 @@ export const print_design = [
   {
     title: 'Postcards',
     client: ['DLV'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      'Printed marketing collateral for DLV Designs to have on hand in showroom. Each product card provides a deep dive into the process and materials used in construction, as well as the available finishes offered. Photography, art direction,and graphic design.',
+    tech: ['indesign'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813175/ali/print_design/dlv_postcards/_DLV_Postcards_Thumbnail_vgajav.png',
     gallery: [
@@ -22,9 +22,9 @@ export const print_design = [
   {
     title: 'Business Cards',
     client: ['Gro Intelligence'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      'Business Card Design. Recently rebranded and heading back into the world, Sales people at Gro Intelligence required physical business cards to hand out at a recent conference. Using the brand pattern, palette, and typography from our DSM. Various concepts led to this final decision in a 24-hr rush period to get to printer before colleagues left for the conference. ',
+    tech: ['figma', 'illustrator'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813268/ali/print_design/gro_intelligence_business_cards/Gro_Intelligence_Business_Cards_twvoea.png',
     gallery: [
@@ -36,9 +36,9 @@ export const print_design = [
   {
     title: 'Embroidery Sourcebook',
     client: ['Holland and Sherry'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      'Art direction and head of coordination for week-long photo/video shoot in Nuremberg, Germany for the Holland and Sherry Interiors Embroidery Factory. Concurrent with company rebrand and new website. Layout design and artistic lead on the final deliverable- a 200+ page sourcebook for sales and branding. 2,500 copies in the first run of printing and shipped to over 20 locations worldwide. Also designed for digital release on Issuu.com Photography by Martin Scott Powell.',
+    tech: ['indesign'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813372/ali/print_design/holland_and_sherry_embroidery_sourcebook/_EMB_Source_book_Thumbnail_hla48q.png',
     gallery: [
@@ -56,9 +56,9 @@ export const print_design = [
   {
     title: 'Rug Sourcebook',
     client: ['Holland and Sherry'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      'Concept designs for a 200+page rug sourcebook. Sourcebooks function as high-end catalogs for buyers and were placed throughout showrooms internationally. Spreads shown here highlight vendors, process, and materials to provide context and meaning for clients.',
+    tech: ['indesign'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813586/ali/print_design/holland_and_sherry_rug_sourcebook/_HS_Rug_Sourcebook_Thumbnail_rhc6ut.png',
     gallery: [
@@ -79,9 +79,9 @@ export const print_design = [
   {
     title: 'Outdoor Sourcebook',
     client: ['Holland and Sherry'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      "Art direction and head of coordination for week-long photo/video shoot in Colerne, England for the Holland and Sherry Interiors Outdoor Fabric. Coordination between Coco Wolf, a british furniture manufacturer, and our own mills to showcase Holland and Sherry's outdoor fabrics on our partner's furniture. Layout design and artistic lead on the final deliverable- a 50+ page sourcebook for sales and branding. 2,500 copies in the first run of printing and shipped to over 20 locations worldwide. Also designed for digital release on Issuu.com Photography by Jenny Gormand.",
+    tech: ['indesign'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813675/ali/print_design/holland_and_sherry_sourcebook/_HS_Outdoor_Sourcebook_Thumbnail_grrt6f.png',
     gallery: [
@@ -99,9 +99,9 @@ export const print_design = [
   {
     title: 'Poster Design',
     client: ['IAFE'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      'Poster design for the annual IAFE convention held in the Midwest. The event was focused on educating local children on the processes of dairy farming in the region. The posters are designed with interactive elements that when scanned by viewer’s devices, will prompt a VR experience for users to explore. Concept, artwork and layout design.',
+    tech: ['illustrator'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626998669/ali/print_design/poster_design_iafe/Poster_Layout_IAFE_conf_uvuy7b.png',
     gallery: [
@@ -114,9 +114,9 @@ export const print_design = [
   {
     title: 'Paxton Lookbook',
     client: ['Holland and Sherry'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      "Art Direction and layout design for a new collection of woven rugs from Holland and Sherry Interiors. Intended for both digital and print, this mini lookbook was used to market the new rugs and printed for showrooms worldwide, as well as posted to the company's Issuu.com page.",
+    tech: ['indesign'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813468/ali/print_design/holland_and_sherry_paxton_lookbook/_HS_paxton_Thumbnail_ylgttu.png',
     gallery: [
@@ -130,9 +130,9 @@ export const print_design = [
   {
     title: 'WedYon',
     client: ['Personal'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      'Personal print assignment. Invitation, RSVP card, menu, and seating card for my wedding in May 2018.',
+    tech: ['illustrator'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813704/ali/print_design/wedyon/_wedyon_thumbnail_htb6yy.png',
     gallery: [
@@ -146,9 +146,9 @@ export const print_design = [
   {
     title: 'API Welcome Card',
     client: ['Gro Intelligence'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      '5x7" postcard to be sent to new API users of Gro Intelligence. The front showcases a recent rebranding and provides new branding language to familiarize clients with the changes. The back showcaseses a designed Crop calendar, which indicates when and how certain crops can be monitored using the company\'s API',
+    tech: ['figma'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813213/ali/print_design/gro_intelligence_api_welcome_card/_api_invite_card_thumbnail_yzhboz.png',
     gallery: [

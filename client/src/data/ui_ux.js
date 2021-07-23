@@ -3,9 +3,9 @@ export const ui_ux = [
   {
     title: 'Email Subscription Flow',
     client: ['Gro Intelligence'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      'Examples of hi-fi email templates to use for onboarding experiences. Use Case of varied personas arriving organically to initiate free, starter, or premium trials of platform. Concepting based on real copy from sales teams. These emails are meant to welcome free new users to the platform, and suggest they upgrade after their free trial of premium use. Friendly, but not overly "cute", as the personas are mainly business people in finance and ag-tech.',
+    tech: ['sketch', 'figma'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813888/ali/ui_ux/email_subscription_flow_gro_intelligence/_Email_Wireframes_Gro_Intelligence_Thumbnail_tugpf3.png',
     gallery: [
@@ -26,9 +26,9 @@ export const ui_ux = [
   {
     title: 'DSM',
     client: ['Gro Intelligence'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      'examples of an ever-evolving  DSM built in figma. Recently rebranded, this company has asked me to coordinate, consolidate, and communicate a holistic design panel for their assets and how to build future net new components within brand guidelines. the Design System functions as a living organism, growing with each need, but retaining its core values to ensure holistic branding across all channels.',
+    tech: ['figma'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1627014057/ali/ui_ux/dsm/_DSM_thumbnail_ey3lrs.png',
     gallery: [
@@ -44,8 +44,8 @@ export const ui_ux = [
   {
     title: 'Gated Webinar Content',
     client: ['Gro Intelligence'],
-    description: '',
-    footer: '',
+    description:
+      'In an attempt to gate video content on webpage, I went through various explorations of lo, mid and hi-fidelity mocks to try and make an inticing, yet functional form for this landing page. We need to collect company details in order to effectively segment and target personas, and gating our archived webinars was a means to to not only gather intel on general interest, but on who exactly was interested in what we had to say. ',
     tech: [],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813924/ali/ui_ux/gated_webinar_content/_gated_webinar_thumbnail_syjr16.png',
@@ -62,9 +62,9 @@ export const ui_ux = [
   {
     title: 'Invitation',
     client: ['DLV'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      'Event marketing design for industry event in Brooklyn, NY. An email marketing and instagram campaign designed to accrue RSVPs to an interior design industry event. Four artists and designers presenting new work in a engaging salon environment. Concept, artwork and layout design.',
+    tech: ['photoshop'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1627014100/ali/ui_ux/dlv_invitation/_DLV_Invitation_thumbnail_klhzdl.png',
     gallery: [

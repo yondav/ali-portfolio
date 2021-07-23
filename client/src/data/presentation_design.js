@@ -3,9 +3,9 @@ export const presentation_design = [
   {
     title: 'Vamos Juntos',
     client: ['WeWork'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      'Template for internal presentation design. All were developed and conceptualized alongside a team of learning engineers, sales people, and directors. The final deliverable was used worldwide in a series of training seminars.',
+    tech: ['powerpoint'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812489/ali/presentation_design/vamos_juntos_wework/_vamos_juntos_thumbnail_gg70du.png',
     gallery: [
@@ -24,9 +24,9 @@ export const presentation_design = [
   {
     title: 'Sales Deck',
     client: ['Gro Intelligence'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      'Versatile and scalable template provided as fundamental for sales team to place own content. Style guide included in auto-populated deletable slides when template is launched as new document.',
+    tech: ['google-sheets'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812408/ali/presentation_design/sales_deck_gro_intelligence/sales_deck_gro_intelligence_thumbnail_m1use4.png',
     gallery: [
@@ -42,9 +42,9 @@ export const presentation_design = [
   {
     title: 'Sequence Cards',
     client: ['Fly Louie'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      'Digital backdrop during presentation by CEO of startup (Fly Louie). Later used as permanent branding slides on ipads in local airports. ',
+    tech: ['indesign'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812292/ali/presentation_design/fly_louie_sequence_cards/_Fly_Louie_Sequence_Cards_Thumbnail_rqtcpl.png',
     gallery: [
@@ -57,9 +57,9 @@ export const presentation_design = [
   {
     title: 'Digital Backdrop',
     client: ['GMStek'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      'This was the backdrop for GMSTEK’s presentation at an annual aviation conference. The actual dimensions were 120” x 90”. The white drop shadows were printed with silver leaf to create dimensionality.',
+    tech: ['illustrator'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812333/ali/presentation_design/gmstek_digital_backdrop/GMStek_Background_Thumbnail_vxgtq1.png',
     gallery: [
@@ -71,9 +71,9 @@ export const presentation_design = [
   {
     title: 'Enterprise Camp',
     client: ['WeWork'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      'Template for internal presentation design. All were developed and conceptualized alongside a team of learning engineers, sales people, and directors. The final deliverable was used worldwide in a series of training seminars.',
+    tech: ['powerpoint'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812253/ali/presentation_design/enterprise_camp_wework/_Enterprise_Camp_Thumbnail_nhsyzs.png',
     gallery: [
@@ -89,9 +89,9 @@ export const presentation_design = [
   {
     title: 'Sales Kick Off',
     client: ['WeWork'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      'Template for internal presentation design. All were developed and conceptualized alongside a team of learning engineers, sales people, and directors. The final deliverable was used worldwide in a series of training seminars.',
+    tech: ['powerpoint'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812449/ali/presentation_design/sales_kick_off_wework/_Sales_Kick_Off_Thumbnail_dr1qey.png',
     gallery: [
@@ -110,9 +110,9 @@ export const presentation_design = [
   {
     title: 'Inside Sales',
     client: ['WeWork'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      'Template for internal presentation design. All were developed and conceptualized alongside a team of learning engineers, sales people, and directors. The final deliverable was used worldwide in a series of training seminars.',
+    tech: ['powerpoint'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812368/ali/presentation_design/inside_sales_wework/_Inside_Sales_Thumbnail_uejnns.png',
     gallery: [
@@ -132,9 +132,8 @@ export const presentation_design = [
   {
     title: 'Digital Backdrop',
     client: ['TGIF'],
-    description: '',
-    footer: '',
-    tech: [],
+    description: 'Digital backdrop during presentation conference.',
+    tech: ['illustrator'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812205/ali/presentation_design/digital_backdrop_TGIF/_Digital_Backdrop_TGIF_Thumbnail_fhzwrt.png',
     gallery: [

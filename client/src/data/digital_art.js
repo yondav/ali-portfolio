@@ -3,9 +3,9 @@ export const digital_art = [
   {
     title: 'Isometric Iconography',
     client: ['Gro Intelligence'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      'Iconographic details for a branded sales presentation. Designed in collaboration with analysts presenting climate and technology related material.',
+    tech: ['sketch'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812096/ali/digital_art/iconography/isometric_exploration_fju5is.png',
     gallery: [
@@ -16,9 +16,9 @@ export const digital_art = [
   {
     title: 'Glassy Planet',
     client: ['Personal'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      'Self-assigned exploration in illustrator. Honing skills in layer opacities, color work, and composition.',
+    tech: ['illustrator'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626968040/ali/digital_art/glassy_planet/glassy_planet_rgwugp.png',
     gallery: [
@@ -29,9 +29,9 @@ export const digital_art = [
   {
     title: 'Infographics',
     client: ['Personal'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      'Self-assigned exploration in illustrator. Honing skills in layer opacities, color work, layout and information hierarchy.',
+    tech: ['illustrator'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812141/ali/digital_art/infographics/_standard_infographics_thumbnail_bkzd0l.png',
     gallery: [
@@ -44,9 +44,9 @@ export const digital_art = [
   {
     title: 'Digital Textiles',
     client: ['Avenue Mosaic', 'Personal'],
-    description: '',
-    footer: '',
-    tech: [],
+    description:
+      'Digital renderings of tactile and imagined materials. Created for printing and set into full square repeat for patterning and actual use.',
+    tech: ['photoshop'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812005/ali/digital_art/digital_textiles/_digital_textiles_thumbnail_xfdz4a.png',
     gallery: [
