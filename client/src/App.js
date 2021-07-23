@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import Footer from './components/footer';
 import Header from './components/header';
 import StickySocials from './components/sticky_socials';
 
@@ -10,7 +11,7 @@ const App = () => {
     const nav = document.querySelector('nav');
     const stickyLogo = document.querySelector('.sticky-logo-cont');
     const logo = document.querySelector('.header-logo');
-    const sticky = document.querySelector('.header-cont').offsetHeight;
+    const sticky = document.querySelector('nav').offsetHeight;
     const scrollCallBack = window.addEventListener('scroll', () => {
       if (window.pageYOffset > sticky) {
         setSticky(true);
@@ -52,6 +53,7 @@ const App = () => {
     <div className='App'>
       <Header updateMode={updateMode} />
       {isSticky && <StickySocials updateMode={updateMode} />}
+      {isSticky && <Footer />}
     </div>
   );
 };

@@ -6,12 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { presentation_design } from '../../../data/presentation_design';
 import Thumbnail from '../../thumbnail';
 
-const DigitalDesign = ({
-  pageVariants,
-  pageStyle,
-  pageTransition,
-  imdobile,
-}) => {
+const DigitalDesign = ({ pageVariants, pageStyle, pageTransition }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -25,9 +20,8 @@ const DigitalDesign = ({
   const useStyles = makeStyles((theme) => ({
     root: {
       // flexGrow: 1,
-      width: !imdobile
-        ? isLoaded && document.querySelector('.nav').offsetWidth
-        : '100vw',
+      width: isLoaded && document.querySelector('.nav').offsetWidth,
+      paddingBottom: '2rem',
     },
     grid: {
       padding: theme.spacing(9),
@@ -133,7 +127,7 @@ const DigitalDesign = ({
           </Box>
         </motion.div>
       ) : (
-        <h1>LOADING</h1>
+        ''
       )}
     </>
   );

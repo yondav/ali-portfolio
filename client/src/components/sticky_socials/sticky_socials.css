@@ -10,6 +10,7 @@
   background-color: var(--pr-white);
   border-top-left-radius: var(--radius);
   box-shadow: var(--shadow);
+  z-index: 1;
 }
 
 .sticky-icons {

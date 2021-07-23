@@ -21,6 +21,7 @@ const DigitalDesign = ({ pageVariants, pageStyle, pageTransition }) => {
     root: {
       // flexGrow: 1,
       width: isLoaded && document.querySelector('.nav').offsetWidth,
+      paddingBottom: '2rem',
     },
     grid: {
       padding: theme.spacing(9),
@@ -86,20 +87,11 @@ const DigitalDesign = ({ pageVariants, pageStyle, pageTransition }) => {
                   width='100%'
                 />
               </Grid>
-              <Grid item xs={12} md={6}>
-                <Thumbnail
-                  source={ui_ux[4].thumbnail}
-                  alt={ui_ux[4].title}
-                  name={ui_ux[4].title}
-                  client={ui_ux[4].client}
-                  width='100%'
-                />
-              </Grid>
             </Grid>
           </Box>
         </motion.div>
       ) : (
-        <h1>LOADING</h1>
+        ''
       )}
     </>
   );

@@ -1,54 +1,7 @@
 export const ui_ux = [
   // 0
   {
-    title: 'Email Invite Kips Bay',
-    client: ['DLV'],
-    description: '',
-    footer: '',
-    tech: [],
-    thumbnail:
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813786/ali/ui_ux/dlv_email_invite_kips_bay/_dlv_kips_bay_thumbnail_hcbpxv.png',
-    gallery: [
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813786/ali/ui_ux/dlv_email_invite_kips_bay/Kips_Bay_DLV_Email_whgzfp.png',
-    ],
-  },
-  // 1
-  {
-    title: 'Invitation',
-    client: ['DLV'],
-    description: '',
-    footer: '',
-    tech: [],
-    thumbnail:
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813819/ali/ui_ux/dlv_invitation/_DLV_Invitation_Thumbnail_vdcel7.png',
-    gallery: [
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813819/ali/ui_ux/dlv_invitation/DLV_Invite_1_myqxzb.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813819/ali/ui_ux/dlv_invitation/DLV_Invite_2_ipf1nk.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813819/ali/ui_ux/dlv_invitation/DLV_Invite_3_vzochb.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813819/ali/ui_ux/dlv_invitation/DLV_Invite_4_tdcrvo.jpg',
-    ],
-  },
-  // 2
-  {
-    title: 'DSM',
-    client: [''],
-    description: '',
-    footer: '',
-    tech: [],
-    thumbnail:
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813845/ali/ui_ux/dsm/_DSM_thumbnail_oavpfn.png',
-    gallery: [
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813845/ali/ui_ux/dsm/colorsBrand_Palette_ykp14c.png',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813845/ali/ui_ux/dsm/colorsTints_Shades_n0eap3.png',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813845/ali/ui_ux/dsm/colorsGrays_tbqkh3.png',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813845/ali/ui_ux/dsm/Buttons_obzwj9.png',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813845/ali/ui_ux/dsm/Logo_Definitions_Use_s2tp6g.png',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813845/ali/ui_ux/dsm/Typography_yvmanq.png',
-    ],
-  },
-  // 3
-  {
-    title: 'Email Subscription Floe',
+    title: 'Email Subscription Flow',
     client: ['Gro Intelligence'],
     description: '',
     footer: '',
@@ -69,7 +22,25 @@ export const ui_ux = [
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813889/ali/ui_ux/email_subscription_flow_gro_intelligence/Free_to_paid_after_time_of_free_use_zkr6t0.png',
     ],
   },
-  // 4
+  // 1
+  {
+    title: 'DSM',
+    client: ['Gro Intelligence'],
+    description: '',
+    footer: '',
+    tech: [],
+    thumbnail:
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1627014057/ali/ui_ux/dsm/_DSM_thumbnail_ey3lrs.png',
+    gallery: [
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813845/ali/ui_ux/dsm/colorsBrand_Palette_ykp14c.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813845/ali/ui_ux/dsm/colorsTints_Shades_n0eap3.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813845/ali/ui_ux/dsm/colorsGrays_tbqkh3.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813845/ali/ui_ux/dsm/Buttons_obzwj9.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813845/ali/ui_ux/dsm/Logo_Definitions_Use_s2tp6g.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813845/ali/ui_ux/dsm/Typography_yvmanq.png',
+    ],
+  },
+  // 2
   {
     title: 'Gated Webinar Content',
     client: ['Gro Intelligence'],
@@ -85,6 +56,22 @@ export const ui_ux = [
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813925/ali/ui_ux/gated_webinar_content/full_lock_4b_ibg4tz.png',
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813925/ali/ui_ux/gated_webinar_content/full_lock_3-1_hd4wtq.png',
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813925/ali/ui_ux/gated_webinar_content/full_lock_5_dfbmni.png',
+    ],
+  },
+  // 3
+  {
+    title: 'Invitation',
+    client: ['DLV'],
+    description: '',
+    footer: '',
+    tech: [],
+    thumbnail:
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1627014100/ali/ui_ux/dlv_invitation/_DLV_Invitation_thumbnail_klhzdl.png',
+    gallery: [
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813819/ali/ui_ux/dlv_invitation/DLV_Invite_1_myqxzb.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813819/ali/ui_ux/dlv_invitation/DLV_Invite_2_ipf1nk.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813819/ali/ui_ux/dlv_invitation/DLV_Invite_3_vzochb.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813819/ali/ui_ux/dlv_invitation/DLV_Invite_4_tdcrvo.jpg',
     ],
   },
 ];

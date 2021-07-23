@@ -21,6 +21,7 @@ const PrintDesign = ({ pageVariants, pageStyle, pageTransition }) => {
     root: {
       // flexGrow: 1,
       width: isLoaded && document.querySelector('.nav').offsetWidth,
+      paddingBottom: '2rem',
     },
     grid: {
       padding: theme.spacing(9),
@@ -135,7 +136,7 @@ const PrintDesign = ({ pageVariants, pageStyle, pageTransition }) => {
           </Box>
         </motion.div>
       ) : (
-        <h1>LOADING</h1>
+        ''
       )}
     </>
   );
