@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import {
   Switch,
   Route,
@@ -77,13 +77,14 @@ const NavTabs = withStyles({
 
 const slideStyles = {
   root: {
+    width: '40%',
     height: 'calc(100% - 1rem)',
-    overflowX: 'auto',
+    overflowX: 'visible',
+    margin: '0 auto',
   },
   slideContainer: {
     display: 'flex',
     justifyContent: 'center',
-    width: '100%',
   },
 };
 
@@ -137,7 +138,6 @@ const Nav = () => {
   };
 
   let [value, setValue] = useState(indexToLocation[page]);
-  let newValue;
 
   const updateMedia = () => setMobile(window.innerWidth < 700);
 
@@ -152,6 +152,36 @@ const Nav = () => {
     window.addEventListener('resize', updateMedia);
     return () => window.removeEventListener('resize', updateMedia);
   }, [setValue, value]);
+
+  const routes = useMemo(
+    () => [
+      { label: 'DIGITAL DESIGN', to: '/digital_design' },
+      { label: 'PRINT DESIGN', to: '/print_design' },
+      { label: 'GRAPHIC DESIGN', to: '/graphic_design' },
+      { label: 'UI/UX', to: '/ui_ux' },
+      { label: 'INFORMATION', to: '/information' },
+    ],
+    []
+  );
+
+  const mapRoutes = useCallback(
+    () =>
+      routes.map((route, index) => (
+        <NavTab
+          key={index}
+          label={route.label}
+          component={NavLink}
+          to={route.to}
+          onClick={(e) => {
+            index > value
+              ? (variants = pageVariants)
+              : (variants = pageVariantsAlt);
+            setValue(index);
+          }}
+        />
+      )),
+    [routes, value]
+  );
 
   return (
     <>
@@ -168,74 +198,18 @@ const Nav = () => {
             />
           </div>
           {isMobile ? (
-            <SwipeableViews
-              enableMouseEvents
-              style={slideStyles.root}
-              slideStyle={slideStyles.slideContainer}
-              index={value}
-            >
-              <NavTab
-                label='DIGITAL DESIGN'
-                component={NavLink}
-                to='/digital_design'
-                onClick={(e) => {
-                  newValue = 0;
-                  newValue > value
-                    ? (variants = pageVariants)
-                    : (variants = pageVariantsAlt);
-                  setValue(newValue);
-                }}
-                // style={{ alignSelf: 'center' }}
-              />
-              <NavTab
-                label='PRINT DESIGN'
-                component={NavLink}
-                to='/print_design'
-                onClick={(e) => {
-                  newValue = 1;
-                  newValue > value
-                    ? (variants = pageVariants)
-                    : (variants = pageVariantsAlt);
-                  setValue(newValue);
-                }}
-              />
-              <NavTab
-                label='GRAPHIC DESIGN'
-                component={NavLink}
-                to='/graphic_design'
-                onClick={(e) => {
-                  newValue = 2;
-                  newValue > value
-                    ? (variants = pageVariants)
-                    : (variants = pageVariantsAlt);
-                  setValue(newValue);
-                }}
-              />
-              <NavTab
-                label='UI/UX'
-                component={NavLink}
-                to='/ui_ux'
-                onClick={(e) => {
-                  newValue = 3;
-                  newValue > value
-                    ? (variants = pageVariants)
-                    : (variants = pageVariantsAlt);
-                  setValue(newValue);
-                }}
-              />
-              <NavTab
-                label='INFORMATION'
-                component={NavLink}
-                to='/information'
-                onClick={(e) => {
-                  newValue = 3;
-                  newValue > value
-                    ? (variants = pageVariants)
-                    : (variants = pageVariantsAlt);
-                  setValue(newValue);
-                }}
-              />
-            </SwipeableViews>
+            <div style={{ width: '100vw', overflow: 'hidden' }}>
+              <SwipeableViews
+                enableMouseEvents
+                style={slideStyles.root}
+                slideStyle={slideStyles.slideContainer}
+                index={value}
+                hysteresis={0.1}
+                threshold={2}
+              >
+                {mapRoutes()}
+              </SwipeableViews>
+            </div>
           ) : (
             <NavTabs
               value={value}
