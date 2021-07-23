@@ -5,9 +5,11 @@
   --pr-white: #f4f4f4;
   --off-white: #f9f9f9;
   --grey-text: #c4c4c4;
+  --btn: #dbcac7;
   --ease: all 0.7s ease;
   --shadow: rgba(0, 0, 0, 0.25) 0px 4px 16px;
   --radius: 0.3rem;
+  --font: 'Jost', sans-serif;
 }
 
 html {
@@ -16,7 +18,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font);
   font-size: 1em;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
@@ -34,9 +36,8 @@ body {
   --emph-black: #eeeeee;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bold {
+  font-weight: 500;
 }
 
 @media only screen and (min-width: 989px) {

@@ -122,7 +122,7 @@ const PrintDesign = ({ pageVariants, pageStyle, pageTransition }) => {
                   width='100%'
                 />
               </Grid>
-              {/* <Grid item xs={12}>
+              <Grid item xs={12}>
                 <Thumbnail
                   source={print_design[8].thumbnail}
                   alt={print_design[8].title}
@@ -130,7 +130,7 @@ const PrintDesign = ({ pageVariants, pageStyle, pageTransition }) => {
                   client={print_design[8].client}
                   width='100%'
                 />
-              </Grid> */}
+              </Grid>
             </Grid>
           </Box>
         </motion.div>

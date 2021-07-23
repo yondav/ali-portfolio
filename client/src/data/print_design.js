@@ -54,16 +54,25 @@ export const print_design = [
   },
   // 3
   {
-    title: 'API Welcome Card',
-    client: ['Gro Intelligence'],
+    title: 'Rug Sourcebook',
+    client: ['Holland and Sherry'],
     description: '',
     footer: '',
     tech: [],
     thumbnail:
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813213/ali/print_design/gro_intelligence_api_welcome_card/_api_invite_card_thumbnail_yzhboz.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813586/ali/print_design/holland_and_sherry_rug_sourcebook/_HS_Rug_Sourcebook_Thumbnail_rhc6ut.png',
     gallery: [
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813213/ali/print_design/gro_intelligence_api_welcome_card/300_dpi_card_mock_front_b0slnd.png',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813213/ali/print_design/gro_intelligence_api_welcome_card/300_dpi_card_mock_back_cbjrax.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813585/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread2_rhfivx.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813585/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread4_lwzuxi.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813585/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread5_z5fbcg.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813585/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread6_goedw4.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813585/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread7_niukej.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813585/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread8_orn4ey.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813585/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread9_ubo89e.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813586/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread10_rglgle.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813586/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread11_odk1ta.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813586/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread12_mi5jtr.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813586/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread13_epe0ci.jpg',
     ],
   },
   // 4
@@ -88,25 +97,17 @@ export const print_design = [
   },
   // 5
   {
-    title: 'Rug Sourcebook',
-    client: ['Holland and Sherry'],
+    title: 'Poster Design',
+    client: ['IAFE'],
     description: '',
     footer: '',
     tech: [],
     thumbnail:
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813586/ali/print_design/holland_and_sherry_rug_sourcebook/_HS_Rug_Sourcebook_Thumbnail_rhc6ut.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626998669/ali/print_design/poster_design_iafe/Poster_Layout_IAFE_conf_uvuy7b.png',
     gallery: [
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813585/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread2_rhfivx.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813585/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread4_lwzuxi.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813585/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread5_z5fbcg.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813585/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread6_goedw4.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813585/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread7_niukej.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813585/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread8_orn4ey.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813585/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread9_ubo89e.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813586/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread10_rglgle.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813586/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread11_odk1ta.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813586/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread12_mi5jtr.jpg',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813586/ali/print_design/holland_and_sherry_rug_sourcebook/layout_concept_spread13_epe0ci.jpg',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626998669/ali/print_design/poster_design_iafe/1_ride_to_hide_obemxy.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626998669/ali/print_design/poster_design_iafe/2_udder_to_butter_le8eh0.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626998669/ali/print_design/poster_design_iafe/3_seed_to_soap_pcgr22.png',
     ],
   },
   // 6
@@ -139,6 +140,20 @@ export const print_design = [
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813704/ali/print_design/wedyon/RSVP-card-web_q0lwpb.jpg',
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813704/ali/print_design/wedyon/placecard-ex-web_suzgll.jpg',
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813704/ali/print_design/wedyon/MENU-web_vguhz1.jpg',
+    ],
+  },
+  // 8
+  {
+    title: 'API Welcome Card',
+    client: ['Gro Intelligence'],
+    description: '',
+    footer: '',
+    tech: [],
+    thumbnail:
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813213/ali/print_design/gro_intelligence_api_welcome_card/_api_invite_card_thumbnail_yzhboz.png',
+    gallery: [
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813213/ali/print_design/gro_intelligence_api_welcome_card/300_dpi_card_mock_front_b0slnd.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813213/ali/print_design/gro_intelligence_api_welcome_card/300_dpi_card_mock_back_cbjrax.png',
     ],
   },
 ];

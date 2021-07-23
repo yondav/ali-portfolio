@@ -8,6 +8,10 @@
   transition: var(--ease);
 }
 
+.thumbnail-cont img {
+  object-fit: fill;
+}
+
 .thumbnail-text {
   width: fit-content;
   display: flex;

@@ -11,7 +11,13 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import SwipeableViews from 'react-swipeable-views';
-import { DigitalDesign, PrintDesign, GraphicDesign, UIUX } from '../pages';
+import {
+  DigitalDesign,
+  PrintDesign,
+  GraphicDesign,
+  UIUX,
+  Information,
+} from '../pages';
 import { AnimatePresence } from 'framer-motion';
 import './nav.css';
 
@@ -112,6 +118,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '2rem',
     padding: '1rem',
     backgroundColor: 'var(--pr-white)',
+    transition: 'var(--ease)',
   },
 }));
 
@@ -306,7 +313,7 @@ const Nav = () => {
           </Route>
           <Route path='/information'>
             <div className='page-wrap'>
-              <UIUX
+              <Information
                 pageVariants={variants}
                 pageStyle={pageStyle}
                 pageTransition={pageTransition}
