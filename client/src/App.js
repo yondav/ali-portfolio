@@ -52,6 +52,7 @@ const App = () => {
   return (
     <div className='App'>
       <Header updateMode={updateMode} />
+      {/* header holds nav component which renders each page and holds all routing logic for transitions */}
       {isSticky && <StickySocials updateMode={updateMode} />}
       {isSticky && <Footer />}
     </div>
