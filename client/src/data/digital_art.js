@@ -3,6 +3,7 @@ export const digital_art = [
   {
     title: 'Isometric Iconography',
     client: ['Gro Intelligence'],
+    year: '2020',
     description:
       'Iconographic details for a branded sales presentation. Designed in collaboration with analysts presenting climate and technology related material.',
     tech: ['sketch'],
@@ -16,6 +17,7 @@ export const digital_art = [
   {
     title: 'Glassy Planet',
     client: ['Personal'],
+    year: '2019',
     description:
       'Self-assigned exploration in illustrator. Honing skills in layer opacities, color work, and composition.',
     tech: ['illustrator'],
@@ -29,6 +31,7 @@ export const digital_art = [
   {
     title: 'Infographics',
     client: ['Personal'],
+    year: '2018',
     description:
       'Self-assigned exploration in illustrator. Honing skills in layer opacities, color work, layout and information hierarchy.',
     tech: ['illustrator'],
@@ -44,6 +47,7 @@ export const digital_art = [
   {
     title: 'Digital Textiles',
     client: ['Avenue Mosaic', 'Personal'],
+    year: '2012-2018',
     description:
       'Digital renderings of tactile and imagined materials. Created for printing and set into full square repeat for patterning and actual use.',
     tech: ['photoshop'],

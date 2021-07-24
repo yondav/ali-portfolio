@@ -43,3 +43,21 @@ export const pageTransition = {
 export const pageStyle = {
   position: 'absolute',
 };
+
+export const modalVariants = {
+  initial: {
+    opacity: 0,
+    y: '100vw',
+    scale: 1,
+  },
+  in: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+  },
+  out: {
+    opacity: 0,
+    y: '-100vw',
+    scale: 1,
+  },
+};

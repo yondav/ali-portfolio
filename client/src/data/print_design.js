@@ -3,6 +3,7 @@ export const print_design = [
   {
     title: 'Postcards',
     client: ['DLV'],
+    year: '2018',
     description:
       'Printed marketing collateral for DLV Designs to have on hand in showroom. Each product card provides a deep dive into the process and materials used in construction, as well as the available finishes offered. Photography, art direction,and graphic design.',
     tech: ['indesign'],
@@ -22,6 +23,7 @@ export const print_design = [
   {
     title: 'Business Cards',
     client: ['Gro Intelligence'],
+    year: '2021',
     description:
       'Business Card Design. Recently rebranded and heading back into the world, Sales people at Gro Intelligence required physical business cards to hand out at a recent conference. Using the brand pattern, palette, and typography from our DSM. Various concepts led to this final decision in a 24-hr rush period to get to printer before colleagues left for the conference. ',
     tech: ['figma', 'illustrator'],
@@ -36,6 +38,7 @@ export const print_design = [
   {
     title: 'Embroidery Sourcebook',
     client: ['Holland and Sherry'],
+    year: '2015',
     description:
       'Art direction and head of coordination for week-long photo/video shoot in Nuremberg, Germany for the Holland and Sherry Interiors Embroidery Factory. Concurrent with company rebrand and new website. Layout design and artistic lead on the final deliverable- a 200+ page sourcebook for sales and branding. 2,500 copies in the first run of printing and shipped to over 20 locations worldwide. Also designed for digital release on Issuu.com Photography by Martin Scott Powell.',
     tech: ['indesign'],
@@ -56,6 +59,7 @@ export const print_design = [
   {
     title: 'Rug Sourcebook',
     client: ['Holland and Sherry'],
+    year: '2016',
     description:
       'Concept designs for a 200+page rug sourcebook. Sourcebooks function as high-end catalogs for buyers and were placed throughout showrooms internationally. Spreads shown here highlight vendors, process, and materials to provide context and meaning for clients.',
     tech: ['indesign'],
@@ -79,6 +83,7 @@ export const print_design = [
   {
     title: 'Outdoor Sourcebook',
     client: ['Holland and Sherry'],
+    year: '2016',
     description:
       "Art direction and head of coordination for week-long photo/video shoot in Colerne, England for the Holland and Sherry Interiors Outdoor Fabric. Coordination between Coco Wolf, a british furniture manufacturer, and our own mills to showcase Holland and Sherry's outdoor fabrics on our partner's furniture. Layout design and artistic lead on the final deliverable- a 50+ page sourcebook for sales and branding. 2,500 copies in the first run of printing and shipped to over 20 locations worldwide. Also designed for digital release on Issuu.com Photography by Jenny Gormand.",
     tech: ['indesign'],
@@ -99,6 +104,7 @@ export const print_design = [
   {
     title: 'Poster Design',
     client: ['IAFE'],
+    year: '2017',
     description:
       'Poster design for the annual IAFE convention held in the Midwest. The event was focused on educating local children on the processes of dairy farming in the region. The posters are designed with interactive elements that when scanned by viewer’s devices, will prompt a VR experience for users to explore. Concept, artwork and layout design.',
     tech: ['illustrator'],
@@ -114,6 +120,7 @@ export const print_design = [
   {
     title: 'Paxton Lookbook',
     client: ['Holland and Sherry'],
+    year: '2016',
     description:
       "Art Direction and layout design for a new collection of woven rugs from Holland and Sherry Interiors. Intended for both digital and print, this mini lookbook was used to market the new rugs and printed for showrooms worldwide, as well as posted to the company's Issuu.com page.",
     tech: ['indesign'],
@@ -130,6 +137,7 @@ export const print_design = [
   {
     title: 'WedYon',
     client: ['Personal'],
+    year: '2018',
     description:
       'Personal print assignment. Invitation, RSVP card, menu, and seating card for my wedding in May 2018.',
     tech: ['illustrator'],
@@ -146,6 +154,7 @@ export const print_design = [
   {
     title: 'API Welcome Card',
     client: ['Gro Intelligence'],
+    year: '2021',
     description:
       '5x7" postcard to be sent to new API users of Gro Intelligence. The front showcases a recent rebranding and provides new branding language to familiarize clients with the changes. The back showcaseses a designed Crop calendar, which indicates when and how certain crops can be monitored using the company\'s API',
     tech: ['figma'],

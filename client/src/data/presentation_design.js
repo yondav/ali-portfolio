@@ -3,6 +3,7 @@ export const presentation_design = [
   {
     title: 'Vamos Juntos',
     client: ['WeWork'],
+    year: '2019',
     description:
       'Template for internal presentation design. All were developed and conceptualized alongside a team of learning engineers, sales people, and directors. The final deliverable was used worldwide in a series of training seminars.',
     tech: ['powerpoint'],
@@ -24,6 +25,7 @@ export const presentation_design = [
   {
     title: 'Sales Deck',
     client: ['Gro Intelligence'],
+    year: '2021',
     description:
       'Versatile and scalable template provided as fundamental for sales team to place own content. Style guide included in auto-populated deletable slides when template is launched as new document.',
     tech: ['google-sheets'],
@@ -42,6 +44,7 @@ export const presentation_design = [
   {
     title: 'Sequence Cards',
     client: ['Fly Louie'],
+    year: '2017',
     description:
       'Digital backdrop during presentation by CEO of startup (Fly Louie). Later used as permanent branding slides on ipads in local airports. ',
     tech: ['indesign'],
@@ -57,6 +60,7 @@ export const presentation_design = [
   {
     title: 'Digital Backdrop',
     client: ['GMStek'],
+    year: '2016',
     description:
       'This was the backdrop for GMSTEK’s presentation at an annual aviation conference. The actual dimensions were 120” x 90”. The white drop shadows were printed with silver leaf to create dimensionality.',
     tech: ['illustrator'],
@@ -71,6 +75,7 @@ export const presentation_design = [
   {
     title: 'Enterprise Camp',
     client: ['WeWork'],
+    year: '2019',
     description:
       'Template for internal presentation design. All were developed and conceptualized alongside a team of learning engineers, sales people, and directors. The final deliverable was used worldwide in a series of training seminars.',
     tech: ['powerpoint'],
@@ -89,6 +94,7 @@ export const presentation_design = [
   {
     title: 'Sales Kick Off',
     client: ['WeWork'],
+    year: '2019',
     description:
       'Template for internal presentation design. All were developed and conceptualized alongside a team of learning engineers, sales people, and directors. The final deliverable was used worldwide in a series of training seminars.',
     tech: ['powerpoint'],
@@ -110,6 +116,7 @@ export const presentation_design = [
   {
     title: 'Inside Sales',
     client: ['WeWork'],
+    year: '2019',
     description:
       'Template for internal presentation design. All were developed and conceptualized alongside a team of learning engineers, sales people, and directors. The final deliverable was used worldwide in a series of training seminars.',
     tech: ['powerpoint'],
@@ -132,6 +139,7 @@ export const presentation_design = [
   {
     title: 'Digital Backdrop',
     client: ['TGIF'],
+    year: '2018',
     description: 'Digital backdrop during presentation conference.',
     tech: ['illustrator'],
     thumbnail:
