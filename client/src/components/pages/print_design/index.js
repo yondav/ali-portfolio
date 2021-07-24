@@ -52,85 +52,31 @@ const PrintDesign = ({ pageVariants, pageStyle, pageTransition }) => {
               }}
             >
               <Grid item xs={12}>
-                <Thumbnail
-                  source={print_design[0].thumbnail}
-                  alt={print_design[0].title}
-                  name={print_design[0].title}
-                  client={print_design[0].client}
-                  width='100%'
-                />
+                <Thumbnail data={print_design[0]} />
               </Grid>
               <Grid item xs={12} md={6}>
-                <Thumbnail
-                  source={print_design[1].thumbnail}
-                  alt={print_design[1].title}
-                  name={print_design[1].title}
-                  client={print_design[1].client}
-                  width='100%'
-                />
+                <Thumbnail data={print_design[1]} />
               </Grid>
               <Grid item xs={12} md={6}>
-                <Thumbnail
-                  source={print_design[2].thumbnail}
-                  alt={print_design[2].title}
-                  name={print_design[2].title}
-                  client={print_design[2].client}
-                  width='100%'
-                />
+                <Thumbnail data={print_design[2]} />
               </Grid>
               <Grid item xs={12}>
-                <Thumbnail
-                  source={print_design[3].thumbnail}
-                  alt={print_design[3].title}
-                  name={print_design[3].title}
-                  client={print_design[3].client}
-                  width='100%'
-                />
+                <Thumbnail data={print_design[3]} />
               </Grid>
               <Grid item xs={12} md={6}>
-                <Thumbnail
-                  source={print_design[4].thumbnail}
-                  alt={print_design[4].title}
-                  name={print_design[4].title}
-                  client={print_design[4].client}
-                  width='100%'
-                />
+                <Thumbnail data={print_design[4]} />
               </Grid>
               <Grid item xs={12} md={6}>
-                <Thumbnail
-                  source={print_design[5].thumbnail}
-                  alt={print_design[5].title}
-                  name={print_design[5].title}
-                  client={print_design[5].client}
-                  width='100%'
-                />
+                <Thumbnail data={print_design[5]} />
               </Grid>
               <Grid item xs={12} md={6}>
-                <Thumbnail
-                  source={print_design[6].thumbnail}
-                  alt={print_design[6].title}
-                  name={print_design[6].title}
-                  client={print_design[6].client}
-                  width='100%'
-                />
+                <Thumbnail data={print_design[6]} />
               </Grid>
               <Grid item xs={12} md={6}>
-                <Thumbnail
-                  source={print_design[7].thumbnail}
-                  alt={print_design[7].title}
-                  name={print_design[7].title}
-                  client={print_design[7].client}
-                  width='100%'
-                />
+                <Thumbnail data={print_design[7]} />
               </Grid>
               <Grid item xs={12}>
-                <Thumbnail
-                  source={print_design[8].thumbnail}
-                  alt={print_design[8].title}
-                  name={print_design[8].title}
-                  client={print_design[8].client}
-                  width='100%'
-                />
+                <Thumbnail data={print_design[8]} />
               </Grid>
             </Grid>
           </Box>

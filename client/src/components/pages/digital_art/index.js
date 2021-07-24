@@ -52,40 +52,16 @@ const DigitalArt = ({ pageVariants, pageStyle, pageTransition }) => {
               }}
             >
               <Grid item xs={12} md={6}>
-                <Thumbnail
-                  source={digital_art[0].thumbnail}
-                  alt={digital_art[0].title}
-                  name={digital_art[0].title}
-                  client={digital_art[0].client}
-                  width='100%'
-                />
+                <Thumbnail data={digital_art[0]} />
               </Grid>
               <Grid item xs={12} md={6}>
-                <Thumbnail
-                  source={digital_art[1].thumbnail}
-                  alt={digital_art[1].title}
-                  name={digital_art[1].title}
-                  client={digital_art[1].client}
-                  width='100%'
-                />
+                <Thumbnail data={digital_art[1]} />
               </Grid>
               <Grid item xs={12}>
-                <Thumbnail
-                  source={digital_art[2].thumbnail}
-                  alt={digital_art[2].title}
-                  name={digital_art[2].title}
-                  client={digital_art[2].client}
-                  width='100%'
-                />
+                <Thumbnail data={digital_art[2]} />
               </Grid>
               <Grid item xs={12}>
-                <Thumbnail
-                  source={digital_art[3].thumbnail}
-                  alt={digital_art[3].title}
-                  name={digital_art[3].title}
-                  client={digital_art[3].client}
-                  width='100%'
-                />
+                <Thumbnail data={digital_art[3]} />
               </Grid>
             </Grid>
           </Box>

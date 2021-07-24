@@ -52,76 +52,28 @@ const PresentationDesign = ({ pageVariants, pageStyle, pageTransition }) => {
               }}
             >
               <Grid item xs={12}>
-                <Thumbnail
-                  source={presentation_design[0].thumbnail}
-                  alt={presentation_design[0].title}
-                  name={presentation_design[0].title}
-                  client={presentation_design[0].client}
-                  width='100%'
-                />
+                <Thumbnail data={presentation_design[0]} />
               </Grid>
               <Grid item xs={12} md={6}>
-                <Thumbnail
-                  source={presentation_design[1].thumbnail}
-                  alt={presentation_design[1].title}
-                  name={presentation_design[1].title}
-                  client={presentation_design[1].client}
-                  width='100%'
-                />
+                <Thumbnail data={presentation_design[1]} />
               </Grid>
               <Grid item xs={12} md={6}>
-                <Thumbnail
-                  source={presentation_design[2].thumbnail}
-                  alt={presentation_design[2].title}
-                  name={presentation_design[2].title}
-                  client={presentation_design[2].client}
-                  width='100%'
-                />
+                <Thumbnail data={presentation_design[2]} />
               </Grid>
               <Grid item xs={12}>
-                <Thumbnail
-                  source={presentation_design[3].thumbnail}
-                  alt={presentation_design[3].title}
-                  name={presentation_design[3].title}
-                  client={presentation_design[3].client}
-                  width='100%'
-                />
+                <Thumbnail data={presentation_design[3]} />
               </Grid>
               <Grid item xs={12} md={6}>
-                <Thumbnail
-                  source={presentation_design[4].thumbnail}
-                  alt={presentation_design[4].title}
-                  name={presentation_design[4].title}
-                  client={presentation_design[4].client}
-                  width='100%'
-                />
+                <Thumbnail data={presentation_design[4]} />
               </Grid>
               <Grid item xs={12} md={6}>
-                <Thumbnail
-                  source={presentation_design[5].thumbnail}
-                  alt={presentation_design[5].title}
-                  name={presentation_design[5].title}
-                  client={presentation_design[5].client}
-                  width='100%'
-                />
+                <Thumbnail data={presentation_design[5]} />
               </Grid>
               <Grid item xs={12} md={6}>
-                <Thumbnail
-                  source={presentation_design[6].thumbnail}
-                  alt={presentation_design[6].title}
-                  name={presentation_design[6].title}
-                  client={presentation_design[6].client}
-                  width='100%'
-                />
+                <Thumbnail data={presentation_design[6]} />
               </Grid>
               <Grid item xs={12} md={6}>
-                <Thumbnail
-                  source={presentation_design[7].thumbnail}
-                  alt={presentation_design[7].title}
-                  name={presentation_design[7].title}
-                  client={presentation_design[7].client}
-                  width='100%'
-                />
+                <Thumbnail data={presentation_design[7]} />
               </Grid>
             </Grid>
           </Box>

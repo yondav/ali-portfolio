@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
 import ProjectModal from '../project_modal';
 import './thumbnail.css';
 
-const Thumbnail = ({ source, alt, name, client, width }) => {
+const Thumbnail = ({ data }) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
@@ -18,11 +17,11 @@ const Thumbnail = ({ source, alt, name, client, width }) => {
     <>
       <div className='thumbnail' onClick={handleOpen}>
         <div width='100%' className='thumbnail-cont'>
-          <img src={source} alt={alt} width={width} />
+          <img src={data.thumbnail} alt={data.title} width='100%' />
         </div>
         <div className='thumbnail-text'>
-          <p>{name}</p>
-          {client.map((c) => (
+          <p>{data.title}</p>
+          {data.client.map((c) => (
             <div className='thumbnail-text' key={c}>
               <p>|</p>
               <p>{c}</p>
@@ -30,9 +29,7 @@ const Thumbnail = ({ source, alt, name, client, width }) => {
           ))}
         </div>
       </div>
-      <AnimatePresence>
-        <ProjectModal handleClose={handleClose} open={open} />
-      </AnimatePresence>
+      <ProjectModal handleClose={handleClose} open={open} data={data} />
     </>
   );
 };

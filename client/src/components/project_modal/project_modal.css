@@ -1,0 +1,69 @@
+.project-modal {
+  width: 90vw;
+  height: 75vh;
+  display: flex;
+  border-radius: var(--radius);
+  border: none;
+  outline: none;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.carousel-container {
+  padding: 2rem;
+  flex-basis: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--pr-black);
+  overflow: hidden;
+}
+
+.slide {
+  width: 45rem;
+}
+
+.arrow-cont {
+  width: 5rem;
+}
+
+.carousel-arrows {
+  color: var(--pr-white);
+  font-size: 5em;
+}
+
+.carousel-container
+  > .awssld
+  > .awssld__wrapper
+  > .awssld__container
+  > .awssld__box
+  > .awssld__content
+  > img {
+  object-fit: contain;
+  object-position: center;
+  background-color: var(--pr-black);
+}
+
+.awssld {
+  --loader-bar-color: none;
+  --loader-bar-height: 0px;
+  --control-button-height: 25%;
+  --control-button-opacity: 0.5;
+  --control-button-hover-opacity: 0.75;
+  --slider-transition-duration: 675ms;
+  --organic-arrow-color: var(--pr-white);
+  --organic-arrow-border-radius: var(--radius);
+  --control-bullet-color: #6a6a6a;
+  --control-bullet-active-color: #6a6a6a;
+  --content-background-color: var(--pr-black);
+}
+
+.awssld__bullets button {
+  height: 12px;
+  width: 12px;
+}
+
+.info-container {
+  flex-basis: 30%;
+  background-color: var(--pr-white);
+}

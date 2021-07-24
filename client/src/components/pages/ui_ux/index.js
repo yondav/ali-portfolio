@@ -19,7 +19,6 @@ const DigitalDesign = ({ pageVariants, pageStyle, pageTransition }) => {
 
   const useStyles = makeStyles((theme) => ({
     root: {
-      // flexGrow: 1,
       width: isLoaded && document.querySelector('.nav').offsetWidth,
       paddingBottom: '5rem',
     },
@@ -52,40 +51,16 @@ const DigitalDesign = ({ pageVariants, pageStyle, pageTransition }) => {
               }}
             >
               <Grid item xs={12}>
-                <Thumbnail
-                  source={ui_ux[0].thumbnail}
-                  alt={ui_ux[0].title}
-                  name={ui_ux[0].title}
-                  client={ui_ux[0].client}
-                  width='100%'
-                />
+                <Thumbnail data={ui_ux[0]} />
               </Grid>
               <Grid item xs={12} md={6}>
-                <Thumbnail
-                  source={ui_ux[1].thumbnail}
-                  alt={ui_ux[1].title}
-                  name={ui_ux[1].title}
-                  client={ui_ux[1].client}
-                  width='100%'
-                />
+                <Thumbnail data={ui_ux[1]} />
               </Grid>
               <Grid item xs={12} md={6}>
-                <Thumbnail
-                  source={ui_ux[2].thumbnail}
-                  alt={ui_ux[2].title}
-                  name={ui_ux[2].title}
-                  client={ui_ux[2].client}
-                  width='100%'
-                />
+                <Thumbnail data={ui_ux[2]} />
               </Grid>
               <Grid item xs={12}>
-                <Thumbnail
-                  source={ui_ux[3].thumbnail}
-                  alt={ui_ux[3].title}
-                  name={ui_ux[3].title}
-                  client={ui_ux[3].client}
-                  width='100%'
-                />
+                <Thumbnail data={ui_ux[3]} />
               </Grid>
             </Grid>
           </Box>

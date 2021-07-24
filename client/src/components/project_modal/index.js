@@ -1,13 +1,16 @@
 import React from 'react';
-import { Modal, Paper, makeStyles, Backdrop } from '@material-ui/core';
+import { Modal, makeStyles, Backdrop } from '@material-ui/core';
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
 import Grow from '@material-ui/core/Grow';
+import './project_modal.css';
 
 const useStyles = makeStyles(() => ({
   modal: { display: 'flex', justifyContent: 'center', alignItems: 'center' },
   paper: { width: 200, height: 200 },
 }));
 
-const ProjectModal = ({ open, handleClose }) => {
+const ProjectModal = ({ open, handleClose, data }) => {
   const classes = useStyles();
 
   return (
@@ -26,7 +29,17 @@ const ProjectModal = ({ open, handleClose }) => {
         style={{ transformOrigin: '0 10 0' }}
         {...(open ? { timeout: 1000 } : {})}
       >
-        <Paper className={classes.paper}>Test</Paper>
+        <div className='project-modal'>
+          <div className='carousel-container'>
+            <AwesomeSlider mobileTouch={true}>
+              {data.gallery.map((img, index) => (
+                <div key={index} data-src={img} className={img} />
+              ))}
+            </AwesomeSlider>
+            );
+          </div>
+          <div className='info-container'></div>
+        </div>
       </Grow>
     </Modal>
   );

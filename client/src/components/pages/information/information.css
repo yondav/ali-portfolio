@@ -30,6 +30,7 @@
   font-weight: 500;
   font-size: 1.125em;
   text-align: left;
+  color: var(--pr-black);
   background-color: var(--pr-white);
   border: 0.2rem solid var(--pr-black);
   border-radius: var(--radius);
@@ -40,6 +41,7 @@
 .btn:hover,
 .btn:focus {
   transform: translateY(-0.5rem);
+  color: #343434;
   background-color: var(--btn);
   /* box-shadow: var(--shadow); */
 }
