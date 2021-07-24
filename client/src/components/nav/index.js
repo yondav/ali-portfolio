@@ -1,73 +1,15 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import {
-  Switch,
-  Route,
-  NavLink,
-  useLocation,
-  Redirect,
-} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import SwipeableViews from 'react-swipeable-views';
 import {
-  DigitalDesign,
-  PrintDesign,
-  GraphicDesign,
-  UIUX,
-  Information,
-} from '../pages';
-import { AnimatePresence } from 'framer-motion';
+  pageVariants,
+  pageVariantsAlt,
+} from '../../utils/animationTransitions';
 import './nav.css';
-
-let variants;
-
-const pageVariants = {
-  initial: {
-    opacity: 0,
-    x: '200vw',
-    scale: 1,
-  },
-  in: {
-    opacity: 1,
-    x: 0,
-    scale: 1,
-  },
-  out: {
-    opacity: 0,
-    // x: '-100vw',
-    scale: 1,
-  },
-};
-
-const pageVariantsAlt = {
-  initial: {
-    opacity: 0,
-    x: '-100vw',
-    scale: 1,
-  },
-  in: {
-    opacity: 1,
-    x: 0,
-    scale: 1,
-  },
-  out: {
-    opacity: 0,
-    // x: '200vw',
-    scale: 1,
-  },
-};
-
-const pageTransition = {
-  type: 'tween',
-  ease: 'easeInOut',
-  duration: 0.7,
-};
-
-const pageStyle = {
-  position: 'absolute',
-};
 
 const NavTabs = withStyles({
   indicator: {
@@ -122,9 +64,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Nav = () => {
+const Nav = ({ setVariant, location }) => {
   const classes = useStyles();
-  const location = useLocation();
   const [isMobile, setMobile] = useState(window.innerWidth < 700);
   let page = location.pathname.substring(1);
   console.log(page);
@@ -137,12 +78,12 @@ const Nav = () => {
     information: 4,
   };
 
-  let [value, setValue] = useState(indexToLocation[page]);
+  let [value, setValue] = useState(indexToLocation[page] || 0);
 
   const updateMedia = () => setMobile(window.innerWidth < 700);
 
   const handleChange = (event, newValue) => {
-    newValue > value ? (variants = pageVariants) : (variants = pageVariantsAlt);
+    newValue > value ? setVariant(pageVariants) : setVariant(pageVariantsAlt);
     setValue(newValue);
   };
 
@@ -164,7 +105,7 @@ const Nav = () => {
     []
   );
 
-  const mapRoutes = useCallback(
+  const mapRoutesMobile = useCallback(
     () =>
       routes.map((route, index) => (
         <NavTab
@@ -174,13 +115,26 @@ const Nav = () => {
           to={route.to}
           onClick={(e) => {
             index > value
-              ? (variants = pageVariants)
-              : (variants = pageVariantsAlt);
+              ? setVariant(pageVariants)
+              : setVariant(pageVariantsAlt);
             setValue(index);
           }}
         />
       )),
-    [routes, value]
+    [routes, value, setVariant]
+  );
+
+  const mapRoutes = useCallback(
+    () =>
+      routes.map((route, index) => (
+        <NavTab
+          key={index}
+          label={route.label}
+          component={NavLink}
+          to={route.to}
+        />
+      )),
+    [routes]
   );
 
   return (
@@ -207,7 +161,7 @@ const Nav = () => {
                 hysteresis={0.1}
                 threshold={2}
               >
-                {mapRoutes()}
+                {mapRoutesMobile()}
               </SwipeableViews>
             </div>
           ) : (
@@ -216,85 +170,12 @@ const Nav = () => {
               onChange={handleChange}
               aria-label='nav tabs'
             >
-              <NavTab
-                label='DIGITAL DESIGN'
-                component={NavLink}
-                to='/digital_design'
-              />
-              <NavTab
-                label='PRINT DESIGN'
-                component={NavLink}
-                to='/print_design'
-              />
-              <NavTab
-                label='GRAPHIC DESIGN'
-                component={NavLink}
-                to='/graphic_design'
-              />
-              <NavTab label='UI/UX' component={NavLink} to='/ui_ux' />
-              <NavTab
-                label='INFORMATION'
-                component={NavLink}
-                to='/information'
-              />
+              {mapRoutes()}
             </NavTabs>
           )}
           <Typography className={classes.padding} />
         </div>
       </nav>
-      <AnimatePresence>
-        <Switch location={location} key={location.pathname}>
-          <Route exact path='/'>
-            <Redirect to='/digital_design' />
-          </Route>
-          <Route path='/digital_design'>
-            <div className='page-wrap'>
-              <DigitalDesign
-                isMobile={isMobile}
-                pageVariants={variants}
-                pageStyle={pageStyle}
-                pageTransition={pageTransition}
-              />
-            </div>
-          </Route>
-          <Route path='/print_design'>
-            <div className='page-wrap'>
-              <PrintDesign
-                pageVariants={variants}
-                pageStyle={pageStyle}
-                pageTransition={pageTransition}
-              />
-            </div>
-          </Route>
-          <Route path='/graphic_design'>
-            <div className='page-wrap'>
-              <GraphicDesign
-                pageVariants={variants}
-                pageStyle={pageStyle}
-                pageTransition={pageTransition}
-              />
-            </div>
-          </Route>
-          <Route path='/ui_ux'>
-            <div className='page-wrap'>
-              <UIUX
-                pageVariants={variants}
-                pageStyle={pageStyle}
-                pageTransition={pageTransition}
-              />
-            </div>
-          </Route>
-          <Route path='/information'>
-            <div className='page-wrap'>
-              <Information
-                pageVariants={variants}
-                pageStyle={pageStyle}
-                pageTransition={pageTransition}
-              />
-            </div>
-          </Route>
-        </Switch>
-      </AnimatePresence>
     </>
   );
 };
