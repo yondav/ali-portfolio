@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { digital_art } from '../../../data/digital_art';
 import Thumbnail from '../../thumbnail';
 
-const GraphicDesign = ({ pageVariants, pageStyle, pageTransition }) => {
+const DigitalArt = ({ pageVariants, pageStyle, pageTransition }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -97,4 +97,4 @@ const GraphicDesign = ({ pageVariants, pageStyle, pageTransition }) => {
   );
 };
 
-export default GraphicDesign;
+export default DigitalArt;

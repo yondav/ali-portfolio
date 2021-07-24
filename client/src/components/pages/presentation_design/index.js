@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { presentation_design } from '../../../data/presentation_design';
 import Thumbnail from '../../thumbnail';
 
-const DigitalDesign = ({ pageVariants, pageStyle, pageTransition }) => {
+const PresentationDesign = ({ pageVariants, pageStyle, pageTransition }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -133,4 +133,4 @@ const DigitalDesign = ({ pageVariants, pageStyle, pageTransition }) => {
   );
 };
 
-export default DigitalDesign;
+export default PresentationDesign;

@@ -9,13 +9,12 @@ import { AnimatePresence } from 'framer-motion';
 import './App.css';
 import Header from './components/header';
 import {
-  DigitalDesign,
+  DigitalArt,
   PrintDesign,
-  GraphicDesign,
+  PresentationDesign,
   UIUX,
   Information,
 } from './components/pages';
-import StickySocials from './components/sticky_socials';
 import Footer from './components/footer';
 
 const App = () => {
@@ -78,11 +77,11 @@ const App = () => {
       <AnimatePresence>
         <Switch location={location} key={location.pathname}>
           <Route exact path='/'>
-            <Redirect to='/digital_design' />
+            <Redirect to='/digital_art' />
           </Route>
-          <Route path='/digital_design'>
+          <Route path='/digital_art'>
             <div className='page-wrap'>
-              <DigitalDesign
+              <DigitalArt
                 pageVariants={variant}
                 pageStyle={pageStyle}
                 pageTransition={pageTransition}
@@ -98,9 +97,9 @@ const App = () => {
               />
             </div>
           </Route>
-          <Route path='/graphic_design'>
+          <Route path='/presentation_design'>
             <div className='page-wrap'>
-              <GraphicDesign
+              <PresentationDesign
                 pageVariants={variant}
                 pageStyle={pageStyle}
                 pageTransition={pageTransition}
@@ -127,8 +126,7 @@ const App = () => {
           </Route>
         </Switch>
       </AnimatePresence>
-      {isSticky && <StickySocials updateMode={updateMode} />}
-      {isSticky && <Footer />}
+      {isSticky && <Footer updateMode={updateMode} />}
     </div>
   );
 };

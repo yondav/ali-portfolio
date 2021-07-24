@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Nav = ({ setVariant, location }) => {
   const classes = useStyles();
-  const [isMobile, setMobile] = useState(window.innerWidth < 700);
+  const [isMobile, setMobile] = useState(window.innerWidth < 720);
   let page = location.pathname.substring(1);
   console.log(page);
 
@@ -80,7 +80,7 @@ const Nav = ({ setVariant, location }) => {
 
   let [value, setValue] = useState(indexToLocation[page] || 0);
 
-  const updateMedia = () => setMobile(window.innerWidth < 700);
+  const updateMedia = () => setMobile(window.innerWidth < 720);
 
   const handleChange = (event, newValue) => {
     newValue > value ? setVariant(pageVariants) : setVariant(pageVariantsAlt);
@@ -96,11 +96,11 @@ const Nav = ({ setVariant, location }) => {
 
   const routes = useMemo(
     () => [
-      { label: 'DIGITAL DESIGN', to: '/digital_design' },
+      { label: 'PRESENTATION DESIGN', to: '/presentation_design' },
       { label: 'PRINT DESIGN', to: '/print_design' },
-      { label: 'GRAPHIC DESIGN', to: '/graphic_design' },
       { label: 'UI/UX', to: '/ui_ux' },
-      { label: 'INFORMATION', to: '/information' },
+      { label: 'DIGITAL ART', to: '/digital_art' },
+      { label: 'INFO', to: '/information' },
     ],
     []
   );

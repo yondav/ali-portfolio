@@ -5,6 +5,46 @@ footer {
   width: 100vw;
   padding: 0.5rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   background-color: var(--pr-white);
+}
+
+.footer-socials {
+  width: 10rem;
+  display: flex;
+}
+
+.footer-ig {
+  padding-right: 1rem !important;
+}
+
+.footer-contrast {
+  padding-left: 1rem !important;
+  border-left: 1px solid var(--pr-grey);
+}
+
+.sticky-icons {
+  margin: 0.5rem 0;
+  padding: 0 0.5rem;
+  font-size: 1.2em;
+  color: var(--pr-grey);
+  transition: var(--ease);
+  cursor: pointer;
+}
+
+.sticky-icons:hover,
+.sticky-icons:focus {
+  color: var(--pr-black);
+  transform: scale(1.05);
+}
+
+.sticky-icons:active {
+  color: var(--pr-black);
+  transform: scale(0.95);
+}
+
+.underline {
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--pr-grey);
 }

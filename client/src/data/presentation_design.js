@@ -49,7 +49,7 @@ export const presentation_design = [
       'Digital backdrop during presentation by CEO of startup (Fly Louie). Later used as permanent branding slides on ipads in local airports. ',
     tech: ['indesign'],
     thumbnail:
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812292/ali/presentation_design/fly_louie_sequence_cards/_Fly_Louie_Sequence_Cards_Thumbnail_rqtcpl.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1627090493/ali/presentation_design/fly_louie_sequence_cards/fly_louie_sequence_cards_2_uoipoc.png',
     gallery: [
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812292/ali/presentation_design/fly_louie_sequence_cards/FL_sequence_card_1_xxb081.png',
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812292/ali/presentation_design/fly_louie_sequence_cards/FL_sequence_card_2_xwtheb.png',
