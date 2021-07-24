@@ -8,7 +8,7 @@ import {
 import Nav from '../nav';
 import './header.css';
 
-const Header = ({ updateMode }) => {
+const Header = ({ updateMode, variant, setVariant, location }) => {
   return (
     <div className='header-cont'>
       <header className='header'>
@@ -46,7 +46,7 @@ const Header = ({ updateMode }) => {
           </Grid>
         </Grid>
       </header>
-      <Nav />
+      <Nav variant={variant} setVariant={setVariant} location={location} />
     </div>
   );
 };
