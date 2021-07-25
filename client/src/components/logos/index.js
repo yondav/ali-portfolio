@@ -4,3 +4,4 @@ export { default as CreativeCloud } from './CreativeCloud';
 export { default as Figma } from './Figma';
 export { default as GoogleSlides } from './GoogleSlides';
 export { default as Illustrator } from './Illustrator';
+export { default as Indesign } from './Indesign';

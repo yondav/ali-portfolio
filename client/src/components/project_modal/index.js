@@ -12,6 +12,7 @@ import {
   Figma,
   GoogleSlides,
   Illustrator,
+  Indesign,
 } from '../logos';
 
 const useStyles = makeStyles(() => ({
@@ -64,6 +65,7 @@ const ProjectModal = ({ open, handleClose, data }) => {
             <Figma width={35} height={35} />
             <GoogleSlides width={35} height={35} />
             <Illustrator width={35} height={35} />
+            <Indesign width={35} height={35} />
           </div>
         </div>
       </Grow>
