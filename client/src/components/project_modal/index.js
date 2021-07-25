@@ -5,8 +5,7 @@ import 'react-awesome-slider/dist/styles.css';
 import Grow from '@material-ui/core/Grow';
 import { AiOutlineClose } from 'react-icons/ai';
 import './project_modal.css';
-import { Acrobat } from '../logos';
-import '../../assets/logos/logos.css';
+import { Acrobat, AfterEffects } from '../logos';
 
 const useStyles = makeStyles(() => ({
   modal: { display: 'flex', justifyContent: 'center', alignItems: 'center' },
@@ -52,7 +51,8 @@ const ProjectModal = ({ open, handleClose, data }) => {
               </div>
             </div>
             <p>{data.description}</p>
-            <Acrobat />
+            <Acrobat width={35} height={35} />
+            <AfterEffects width={35} height={35} />
           </div>
         </div>
       </Grow>

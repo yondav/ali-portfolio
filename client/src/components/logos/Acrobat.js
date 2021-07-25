@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 import './logos.css';
 
-const Acrobat = () => {
+const Acrobat = ({ width, height }) => {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
   const [color, setColor] = useState(false);
@@ -39,8 +39,8 @@ const Acrobat = () => {
       onMouseLeave={handleMouseLeave}
     >
       <svg
-        // width='30'
-        // height='30'
+        width={width}
+        height={height}
         viewBox='0 0 128 128'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'

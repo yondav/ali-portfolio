@@ -3,11 +3,6 @@ path {
   transition: var(--ease);
 }
 
-svg {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
 svg:hover {
   transform: translateY(-0.2rem);
 }
