@@ -14,6 +14,7 @@ import {
   Illustrator,
   Indesign,
   LightRoom,
+  Photoshop,
   PowerPoint,
 } from '../logos';
 
@@ -61,7 +62,7 @@ const ProjectModal = ({ open, handleClose, data }) => {
               </div>
             </div>
             <p>{data.description}</p>
-            <Acrobat width={35} height={35} />
+            {/* <Acrobat width={35} height={35} /> */}
             <AfterEffects width={35} height={35} />
             <CreativeCloud width={35} height={35} />
             <Figma width={35} height={35} />
@@ -70,6 +71,7 @@ const ProjectModal = ({ open, handleClose, data }) => {
             <Indesign width={35} height={35} />
             <LightRoom width={35} height={35} />
             <PowerPoint width={35} height={35} />
+            <Photoshop width={35} height={35} />
           </div>
         </div>
       </Grow>
