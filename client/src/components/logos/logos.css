@@ -1,4 +1,5 @@
 svg,
+ellipse,
 path {
   transition: var(--ease);
 }

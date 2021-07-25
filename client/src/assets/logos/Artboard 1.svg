@@ -1,0 +1,93 @@
+<svg
+  id="Layer_1"
+  data-name="Layer 1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 560 400"
+>
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f4b400;
+      }
+      .cls-2 {
+        fill: #f1f1f1;
+      }
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+      .cls-4 {
+        fill: #fada80;
+      }
+      .cls-5,
+      .cls-6 {
+        fill: #fff;
+      }
+      .cls-5,
+      .cls-8 {
+        fill-opacity: 0.1;
+      }
+      .cls-6,
+      .cls-7 {
+        fill-opacity: 0.2;
+      }
+      .cls-7,
+      .cls-8 {
+        fill: #bf360c;
+      }
+      .cls-9 {
+        fill: url(#radial-gradient);
+      }
+    </style>
+    <linearGradient
+      id="linear-gradient"
+      x1="-244.81"
+      y1="732.09"
+      x2="-243.81"
+      y2="732.09"
+      gradientTransform="matrix(0, 63.54, 63.54, 0, -46353.32, 15631.07)"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0" stop-color="#bf360c" stop-opacity="0.2" />
+      <stop offset="1" stop-color="#bf360c" stop-opacity="0.02" />
+    </linearGradient>
+    <radialGradient
+      id="radial-gradient"
+      cx="-231.14"
+      cy="666.13"
+      r="104.95"
+      gradientTransform="matrix(4.23, 0, 0, -4.23, 983.11, 2822.23)"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0" stop-color="#fff" stop-opacity="0.1" />
+      <stop offset="1" stop-color="#fff" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <path
+    class="cls-1"
+    d="M125,0H18.75A18.81,18.81,0,0,0,0,18.75v237.5A18.81,18.81,0,0,0,18.75,275h162.5A18.81,18.81,0,0,0,200,256.25V75L156.25,43.75Z"
+  />
+  <path
+    class="cls-2"
+    d="M140.62,125H59.37A9.4,9.4,0,0,0,50,134.38v81.25A9.4,9.4,0,0,0,59.37,225h81.25a9.4,9.4,0,0,0,9.38-9.37V134.38A9.41,9.41,0,0,0,140.62,125Zm-3.12,71.88h-75V153.13h75Z"
+  />
+  <path class="cls-3" d="M130.48,69.52,200,139V75Z" />
+  <path class="cls-4" d="M125,0V56.25A18.74,18.74,0,0,0,143.75,75H200Z" />
+  <path class="cls-5" d="M125,0V1.56L198.44,75H200Z" />
+  <path
+    class="cls-6"
+    d="M18.75,0A18.81,18.81,0,0,0,0,18.75v1.56A18.81,18.81,0,0,1,18.75,1.56H125V0Z"
+  />
+  <path
+    class="cls-7"
+    d="M181.25,273.44H18.75A18.81,18.81,0,0,1,0,254.69v1.56A18.81,18.81,0,0,0,18.75,275h162.5A18.81,18.81,0,0,0,200,256.25v-1.56A18.81,18.81,0,0,1,181.25,273.44Z"
+  />
+  <path
+    class="cls-8"
+    d="M143.75,75A18.74,18.74,0,0,1,125,56.25v1.56a18.74,18.74,0,0,0,18.75,18.75H200V75Z"
+  />
+  <path
+    class="cls-9"
+    d="M125,0H18.75A18.81,18.81,0,0,0,0,18.75v237.5A18.81,18.81,0,0,0,18.75,275h162.5A18.81,18.81,0,0,0,200,256.25V75Z"
+  />
+</svg>

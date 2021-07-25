@@ -8,61 +8,61 @@ const CreativeCloud = ({ width, height }) => {
   const [color, setColor] = useState(false);
 
   const fill = {
-    eclipse_one: darkMode
+    ellipse_one: darkMode
       ? !color
-        ? '#343434'
+        ? '#f4f4f4'
         : '#fb1da7'
       : !color
-      ? '#f4f4f4'
+      ? '#343434'
       : '#fb1da7',
-    eclipse_two: darkMode
+    ellipse_two: darkMode
       ? !color
-        ? '#343434'
+        ? '#f4f4f4'
         : '#fb1da7'
       : !color
-      ? '#f4f4f4'
+      ? '#343434'
       : '#fb1da7',
-    eclipse_three: darkMode
+    ellipse_three: darkMode
       ? !color
-        ? '#343434'
+        ? '#f4f4f4'
         : '#e70800'
       : !color
-      ? '#f4f4f4'
+      ? '#343434'
       : '#e70800',
-    eclipse_four: darkMode
+    ellipse_four: darkMode
       ? !color
-        ? '#343434'
+        ? '#f4f4f4'
         : '#fc4900'
       : !color
-      ? '#f4f4f4'
+      ? '#343434'
       : '#fc4900',
-    eclipse_five: darkMode
+    ellipse_five: darkMode
       ? !color
-        ? '#343434'
+        ? '#f4f4f4'
         : '#55df4d'
       : !color
-      ? '#f4f4f4'
+      ? '#343434'
       : '#55df4d',
-    eclipse_six: darkMode
+    ellipse_six: darkMode
       ? !color
-        ? '#343434'
+        ? '#f4f4f4'
         : '#2985ff'
       : !color
-      ? '#f4f4f4'
+      ? '#343434'
       : '#2985ff',
-    eclipse_seven: darkMode
+    ellipse_seven: darkMode
       ? !color
-        ? '#343434'
+        ? '#f4f4f4'
         : '#ffd800'
       : !color
-      ? '#f4f4f4'
+      ? '#343434'
       : '#ffd800',
     path_two: darkMode
       ? !color
-        ? '#f4f4f4'
+        ? '#343434'
         : '#f4f4f4'
       : !color
-      ? '#343434'
+      ? '#f4f4f4'
       : '#f4f4f4',
   };
 
@@ -95,7 +95,7 @@ const CreativeCloud = ({ width, height }) => {
               rx='51.423'
               ry='28.2687'
               transform='rotate(28.2623 14.2044 42.6382)'
-              fill={fill.eclipse_one}
+              fill={fill.ellipse_one}
             />
             <ellipse
               cx='15.4291'
@@ -103,7 +103,7 @@ const CreativeCloud = ({ width, height }) => {
               rx='54.3006'
               ry='35.2804'
               transform='rotate(28.2623 15.4291 46.4374)'
-              fill={fill.eclipse_two}
+              fill={fill.ellipse_two}
             />
             <ellipse
               cx='54.7701'
@@ -111,7 +111,7 @@ const CreativeCloud = ({ width, height }) => {
               rx='48.6965'
               ry='32.3897'
               transform='rotate(37.9878 54.7701 9.46785)'
-              fill={fill.eclipse_three}
+              fill={fill.ellipse_three}
             />
             <ellipse
               cx='110.607'
@@ -119,7 +119,7 @@ const CreativeCloud = ({ width, height }) => {
               rx='41.7461'
               ry='40.2228'
               transform='rotate(28.2623 110.607 9.90752)'
-              fill={fill.eclipse_four}
+              fill={fill.ellipse_four}
             />
             <ellipse
               cx='106.549'
@@ -127,7 +127,7 @@ const CreativeCloud = ({ width, height }) => {
               rx='59.6799'
               ry='50.2597'
               transform='rotate(28.2623 106.549 115.479)'
-              fill={fill.eclipse_five}
+              fill={fill.ellipse_five}
             />
             <ellipse
               cx='17.1959'
@@ -135,7 +135,7 @@ const CreativeCloud = ({ width, height }) => {
               rx='47.6817'
               ry='52.3785'
               transform='rotate(28.2623 17.1959 119.282)'
-              fill={fill.eclipse_six}
+              fill={fill.ellipse_six}
             />
             <ellipse
               cx='103.776'
@@ -143,7 +143,7 @@ const CreativeCloud = ({ width, height }) => {
               rx='52.1218'
               ry='30.5907'
               transform='rotate(10.6539 103.776 73.8924)'
-              fill={fill.eclipse_seven}
+              fill={fill.ellipse_seven}
             />
           </g>
           <path

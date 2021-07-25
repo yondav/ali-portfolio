@@ -10,24 +10,24 @@ const AfterEffects = ({ width, height }) => {
   const fill = {
     rect: darkMode
       ? !color
-        ? '#343434'
+        ? '#f4f4f4'
         : '#00005b'
       : !color
-      ? '#f4f4f4'
+      ? '#343434'
       : '#00005b',
     path_one: darkMode
       ? !color
-        ? '#f4f4f4'
+        ? '#343434'
         : '#9999ff'
       : !color
-      ? '#343434'
+      ? '#f4f4f4'
       : '#9999ff',
     path_two: darkMode
       ? !color
-        ? '#f4f4f4'
+        ? '#343434'
         : '#9999ff'
       : !color
-      ? '#343434'
+      ? '#f4f4f4'
       : '#9999ff',
   };
 

@@ -10,17 +10,17 @@ const Acrobat = ({ width, height }) => {
   const fill = {
     path_one: darkMode
       ? !color
-        ? '#343434'
+        ? '#f4f4f4'
         : '#3b1b16'
       : !color
-      ? '#f4f4f4'
+      ? '#343434'
       : '#3b1b16',
     path_two: darkMode
       ? !color
-        ? '#f4f4f4'
+        ? '#343434'
         : '#e54629'
       : !color
-      ? '#343434'
+      ? '#f4f4f4'
       : '#e54629',
   };
 
