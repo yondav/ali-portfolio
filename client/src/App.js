@@ -21,12 +21,32 @@ import './App.css';
 const App = () => {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
-
   const [isSticky, setSticky] = useState(false);
   const [variant, setVariant] = useState(pageVariants);
-
   const location = useLocation();
 
+  // for dark mode
+  useEffect(() => {
+    const logos = document.querySelectorAll('.header-logo');
+
+    if (darkMode) {
+      document.querySelector('body').classList = 'dark';
+      logos.forEach((logo) =>
+        logo.classList.contains('to-black')
+          ? logo.classList.replace('to-black', 'to-white')
+          : logo.classList.add('to-white')
+      );
+    } else {
+      document.querySelector('body').classList = '';
+      logos.forEach((logo) =>
+        logo.classList.contains('to-white')
+          ? logo.classList.replace('to-white', 'to-black')
+          : logo.classList.add('to-black')
+      );
+    }
+  }, [darkMode]);
+
+  // for sticky nav
   useEffect(() => {
     const nav = document.querySelector('nav');
     const stickyLogo = document.querySelector('.sticky-logo-cont');
@@ -47,28 +67,12 @@ const App = () => {
     return () => {
       window.removeEventListener('scroll', scrollCallBack);
     };
-  }, []);
+  });
 
   const updateMode = () => {
-    const logos = document.querySelectorAll('.header-logo');
-
-    if (darkMode) {
-      document.querySelector('body').classList = 'dark';
-      theme.dispatch({ type: 'LIGHTMODE' });
-      logos.forEach((logo) =>
-        logo.classList.contains('to-black')
-          ? logo.classList.replace('to-black', 'to-white')
-          : logo.classList.add('to-white')
-      );
-    } else {
-      document.querySelector('body').classList = '';
-      theme.dispatch({ type: 'DARKMODE' });
-      logos.forEach((logo) =>
-        logo.classList.contains('to-white')
-          ? logo.classList.replace('to-white', 'to-black')
-          : logo.classList.add('to-black')
-      );
-    }
+    darkMode
+      ? theme.dispatch({ type: 'LIGHTMODE' })
+      : theme.dispatch({ type: 'DARKMODE' });
   };
 
   return (

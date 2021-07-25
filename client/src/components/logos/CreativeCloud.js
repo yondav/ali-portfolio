@@ -87,7 +87,7 @@ const CreativeCloud = ({ width, height }) => {
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
       >
-        <g clip-path='url(#clip0)'>
+        <g clipPath='url(#clip0)'>
           <g filter='url(#filter0_f)'>
             <ellipse
               cx='14.2044'
@@ -159,9 +159,9 @@ const CreativeCloud = ({ width, height }) => {
             width='290.177'
             height='291.992'
             filterUnits='userSpaceOnUse'
-            color-interpolation-filters='sRGB'
+            colorInterpolationFilters='sRGB'
           >
-            <feFlood flood-opacity='0' result='BackgroundImageFix' />
+            <feFlood floodOpacity='0' result='BackgroundImageFix' />
             <feBlend
               mode='normal'
               in='SourceGraphic'
