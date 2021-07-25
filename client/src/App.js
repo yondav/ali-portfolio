@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import {
   pageVariants,
   pageTransition,
@@ -6,7 +6,7 @@ import {
 } from './utils/animationTransitions';
 import { Switch, Route, useLocation, Redirect } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import './App.css';
+import { ThemeContext } from './context/ThemeContext';
 import Header from './components/header';
 import {
   DigitalArt,
@@ -16,9 +16,12 @@ import {
   Information,
 } from './components/pages';
 import Footer from './components/footer';
+import './App.css';
 
 const App = () => {
-  const [isDark, setDark] = useState(false);
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
+
   const [isSticky, setSticky] = useState(false);
   const [variant, setVariant] = useState(pageVariants);
 
@@ -49,25 +52,27 @@ const App = () => {
   const updateMode = () => {
     const logos = document.querySelectorAll('.header-logo');
 
-    logos.forEach((logo) => {
-      if (!isDark) {
-        setDark(true);
+    if (darkMode) {
+      document.querySelector('body').classList = 'dark';
+      theme.dispatch({ type: 'LIGHTMODE' });
+      logos.forEach((logo) =>
         logo.classList.contains('to-black')
           ? logo.classList.replace('to-black', 'to-white')
-          : logo.classList.add('to-white');
-      } else {
-        setDark(false);
+          : logo.classList.add('to-white')
+      );
+    } else {
+      document.querySelector('body').classList = '';
+      theme.dispatch({ type: 'DARKMODE' });
+      logos.forEach((logo) =>
         logo.classList.contains('to-white')
           ? logo.classList.replace('to-white', 'to-black')
-          : logo.classList.add('to-black');
-      }
-    });
-
-    document.querySelector('body').classList.toggle('dark');
+          : logo.classList.add('to-black')
+      );
+    }
   };
 
   return (
-    <div className='App'>
+    <>
       <Header
         updateMode={updateMode}
         variant={variant}
@@ -127,7 +132,7 @@ const App = () => {
         </Switch>
       </AnimatePresence>
       {isSticky && <Footer updateMode={updateMode} />}
-    </div>
+    </>
   );
 };
 
