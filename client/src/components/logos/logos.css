@@ -1,6 +1,7 @@
 svg,
 rect,
 ellipse,
+stop,
 path {
   transition: var(--ease);
 }

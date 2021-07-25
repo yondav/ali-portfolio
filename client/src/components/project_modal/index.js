@@ -14,6 +14,7 @@ import {
   Illustrator,
   Indesign,
   LightRoom,
+  PowerPoint,
 } from '../logos';
 
 const useStyles = makeStyles(() => ({
@@ -68,6 +69,7 @@ const ProjectModal = ({ open, handleClose, data }) => {
             <Illustrator width={35} height={35} />
             <Indesign width={35} height={35} />
             <LightRoom width={35} height={35} />
+            <PowerPoint width={35} height={35} />
           </div>
         </div>
       </Grow>

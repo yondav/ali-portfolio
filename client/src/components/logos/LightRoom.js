@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 import './logos.css';
 
-const AfterEffects = ({ width, height }) => {
+const LightRoom = ({ width, height }) => {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
   const [color, setColor] = useState(false);
@@ -59,4 +59,4 @@ const AfterEffects = ({ width, height }) => {
   );
 };
 
-export default AfterEffects;
+export default LightRoom;
