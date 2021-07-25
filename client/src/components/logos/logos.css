@@ -1,4 +1,5 @@
 svg,
+rect,
 ellipse,
 path {
   transition: var(--ease);

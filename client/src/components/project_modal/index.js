@@ -11,6 +11,7 @@ import {
   CreativeCloud,
   Figma,
   GoogleSlides,
+  Illustrator,
 } from '../logos';
 
 const useStyles = makeStyles(() => ({
@@ -62,6 +63,7 @@ const ProjectModal = ({ open, handleClose, data }) => {
             <CreativeCloud width={35} height={35} />
             <Figma width={35} height={35} />
             <GoogleSlides width={35} height={35} />
+            <Illustrator width={35} height={35} />
           </div>
         </div>
       </Grow>
