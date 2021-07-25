@@ -3,7 +3,9 @@ import { Modal, makeStyles, Backdrop } from '@material-ui/core';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 import Grow from '@material-ui/core/Grow';
+import { AiOutlineClose } from 'react-icons/ai';
 import './project_modal.css';
+import '../../assets/logos/logos.css';
 
 const useStyles = makeStyles(() => ({
   modal: { display: 'flex', justifyContent: 'center', alignItems: 'center' },
@@ -38,7 +40,18 @@ const ProjectModal = ({ open, handleClose, data }) => {
             </AwesomeSlider>
             );
           </div>
-          <div className='info-container'></div>
+          <div className='info-container'>
+            <div className='title-cont'>
+              <div className='title'>
+                <h1>{data.title}</h1>
+                <h2>{data.year}</h2>
+              </div>
+              <div className='close-cont'>
+                <AiOutlineClose className='close' onClick={handleClose} />
+              </div>
+            </div>
+            <p>{data.description}</p>
+          </div>
         </div>
       </Grow>
     </Modal>
