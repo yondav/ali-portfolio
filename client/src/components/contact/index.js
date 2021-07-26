@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { init, sendForm } from 'emailjs-com';
+import { BsArrowRight } from 'react-icons/bs';
 import './contact.css';
 init('user_vaI97JhxiA8KpVHJ9XIkA');
 
-const Contact = () => {
+const Contact = ({ handleClose }) => {
   const [statusMessage, setStatusMessage] = useState('Message');
   const [contactNumber, setContactNumber] = useState('000000');
 
@@ -13,7 +14,7 @@ const Contact = () => {
     setContactNumber(numStr.substring(numStr.length - 6));
   };
 
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => {
     const statusMessage = document.querySelector('.status-message');
     const form = document.querySelector('#contact-form');
@@ -26,7 +27,8 @@ const Contact = () => {
         form.reset();
         setStatusMessage('Message sent!');
         statusMessage.className = 'status-message success';
-        setTimeout(() => (statusMessage.className = 'status-message'), 5000);
+        setTimeout(() => (statusMessage.className = 'status-message'), 3000);
+        setTimeout(() => handleClose(), 2000);
       },
       (error) => {
         console.log('FAILED...', error);
@@ -36,22 +38,13 @@ const Contact = () => {
       }
     );
   };
-  const message = watch('message') || '';
-  const messageCharsLeft = 1500 - message.length;
 
   return (
     <div className='contact'>
-      <h1>Contact</h1>
+      <h1>Let's Talk</h1>
       <p className='status-message'>{statusMessage}</p>
 
       <form id='contact-form' onSubmit={handleSubmit(onSubmit)}>
-        <input type='hidden' name='contact_number' value={contactNumber} />
-        {errors.user_name && errors.user_name.type === 'required' && (
-          <div role='alert'>
-            Name is required
-            <br />
-          </div>
-        )}
         <input
           type='text'
           name='user_name'
@@ -59,13 +52,11 @@ const Contact = () => {
           maxLength='30'
           aria-invalid={errors.user_name ? 'true' : 'false'}
           ref={register({ required: true })}
+          style={{ borderBottom: errors.user_name && '1px solid #cc5555' }}
         />
-        <br />
-        {errors.user_email && errors.user_email.type === 'required' && (
-          <div role='alert'>
-            Email is required
-            <br />
-          </div>
+        <input type='hidden' name='contact_number' value={contactNumber} />
+        {errors.user_name && errors.user_name.type === 'required' && (
+          <div role='alert'>Name is required</div>
         )}
         <input
           type='text'
@@ -74,13 +65,10 @@ const Contact = () => {
           maxLength='30'
           aria-invalid={errors.user_email ? 'true' : 'false'}
           ref={register({ required: true })}
+          style={{ borderBottom: errors.user_name && '1px solid #cc5555' }}
         />
-        <br />
-        {errors.message && errors.message.type === 'required' && (
-          <div role='alert'>
-            Message is required
-            <br />
-          </div>
+        {errors.user_email && errors.user_email.type === 'required' && (
+          <div role='alert'>Email is required</div>
         )}
         <textarea
           type='text'
@@ -89,10 +77,18 @@ const Contact = () => {
           maxLength='1500'
           aria-invalid={errors.message ? 'true' : 'false'}
           ref={register({ required: true })}
-        />{' '}
-        <p className='message-chars-left'>{messageCharsLeft}</p>
-        <br />
-        <input type='submit' value='Send' />
+          style={{ borderBottom: errors.user_name && '1px solid #cc5555' }}
+        />
+        {errors.message && errors.message.type === 'required' && (
+          <div role='alert'>Message is required</div>
+        )}
+        {/* <button className='submit-btn' type='submit'>
+          Send <BsArrowRight />
+        </button> */}
+        <div className='submit'>
+          <input className='submit-btn' type='submit' value='Send' />
+          <BsArrowRight />
+        </div>
       </form>
     </div>
   );

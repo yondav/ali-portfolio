@@ -4,10 +4,30 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import './information.css';
+import ContactModal from '../../contact_modal';
+import {
+  Acrobat,
+  AfterEffects,
+  CreativeCloud,
+  Figma,
+  GoogleSlides,
+  Illustrator,
+  Indesign,
+  LightRoom,
+  Photoshop,
+  PowerPoint,
+  Sketch,
+  XD,
+} from '../../logos';
 import resume from '../../../assets/alison_lamb_cv_2021.pdf';
 
 const Information = ({ pageVariants, pageStyle, pageTransition }) => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => setOpen(true);
+
+  const handleClose = () => setOpen(false);
 
   useEffect(() => {
     console.log(document.querySelector('.nav').offsetWidth);
@@ -19,7 +39,6 @@ const Information = ({ pageVariants, pageStyle, pageTransition }) => {
 
   const useStyles = makeStyles((theme) => ({
     root: {
-      // flexGrow: 1,
       width: isLoaded && document.querySelector('.nav').offsetWidth,
       paddingBottom: '5rem',
     },
@@ -82,7 +101,9 @@ const Information = ({ pageVariants, pageStyle, pageTransition }) => {
               </Grid>
               <Grid item xs={12} md={5}>
                 <div className='column-wrap'>
-                  <button className='btn'>Email Me</button>
+                  <button className='btn' onClick={handleOpen}>
+                    Email Me
+                  </button>
                   <Grid
                     container
                     spacing={2}
@@ -117,12 +138,34 @@ const Information = ({ pageVariants, pageStyle, pageTransition }) => {
                       <p>Bauhaus</p>
                       <p>File Structure Naming Conventions</p>
                     </Grid>
+                    <Grid item xs={5}>
+                      <p className='bold'>TECH</p>
+                    </Grid>
+                    <Grid item xs={7}>
+                      <div className='tech-cont'>
+                        <Figma width='1.5rem' height='1.5rem' />
+                        <Sketch width='1.5rem' height='1.5rem' />
+                        <CreativeCloud width='1.5rem' height='1.5rem' />
+                        <Illustrator width='1.5rem' height='1.5rem' />
+                        <Photoshop width='1.5rem' height='1.5rem' />
+                        <LightRoom width='1.5rem' height='1.5rem' />
+                        <Indesign width='1.5rem' height='1.5rem' />
+                        <AfterEffects width='1.5rem' height='1.5rem' />
+                        <XD width='1.5rem' height='1.5rem' />
+                        <Acrobat width='1.5rem' height='1.5rem' />
+                        <GoogleSlides width='1.5rem' height='1.5rem' />
+                        <PowerPoint width='1.5rem' height='1.5rem' />
+                      </div>
+                    </Grid>
                   </Grid>
-                  <button className='btn'>Seriously, Email Me</button>
+                  <button className='btn' onClick={handleOpen}>
+                    Seriously, Email Me
+                  </button>
                 </div>
               </Grid>
             </Grid>
           </Box>
+          <ContactModal handleClose={handleClose} open={open} />
         </motion.div>
       ) : (
         ''

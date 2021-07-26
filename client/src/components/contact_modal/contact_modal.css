@@ -1,0 +1,64 @@
+.contact-modal {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.logo-container {
+  flex-basis: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--pr-black);
+}
+
+.form-logo {
+  flex-basis: 90%;
+  content: url('../../assets/al-logo-white.svg');
+  width: 50%;
+  padding: 1rem 1rem 2rem 1rem;
+  transition: var(--ease);
+}
+
+.logo-container .expand {
+  position: relative;
+}
+
+.form-container {
+  flex-basis: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--pr-white);
+}
+
+.close-contact {
+  align-self: flex-end;
+}
+
+@media only screen and (min-width: 550px) {
+  .form-logo {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 989px) {
+  .contact-modal {
+    height: 70vh;
+    flex-direction: row;
+  }
+
+  .logo-container,
+  .form-container {
+    flex-basis: 50%;
+  }
+
+  .form-logo {
+    width: 50%;
+  }
+}

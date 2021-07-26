@@ -1,36 +1,105 @@
-input {
-  width: 600px;
+.contact {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
+
+.contact h1 {
+  width: 90%;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+form {
+  flex-basis: 100%;
+  flex-grow: 2;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+input,
+textarea {
+  width: 90%;
+  padding: 1rem;
+  background-color: transparent;
+  font: var(--font);
+  border: none;
+  border-bottom: 1px solid var(--pr-black);
+  transition: var(--ease);
+}
+
+input[name='user_name']:focus,
+input[name='user_email']:focus,
+textarea:focus {
+  background-color: var(--btn);
+  outline: none;
+  border-radius: var(--radius);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--dust-pink);
+}
+
 textarea {
   height: 10em;
-  width: 600px;
+}
+
+.submit {
+  width: 3.5rem;
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--ease);
+  cursor: pointer;
+}
+
+.submit-btn {
+  padding: 0;
+  width: fit-content;
+  font-weight: 500;
+  color: var(--pr-black);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.submit:hover,
+.submit:focus {
+  transform: translateY(-0.5rem);
 }
 
 div[role='alert'] {
-  color: red;
-  margin-top: 1em;
-}
-
-.message-chars-left {
-  width: 600px;
-  margin: auto;
-  text-align: left;
-}
-
-.message-chars-left {
-  width: 600px;
-  margin: auto;
-  text-align: left;
+  font-size: 0.8em;
+  color: #cc5555;
 }
 
 .status-message {
+  margin: 0;
+  padding: 0.3rem;
+  text-align: center;
+  border-radius: var(--radius);
+  transition: var(--ease);
   opacity: 0;
 }
+
 .success {
+  width: 90%;
   opacity: 1;
-  color: green;
+  background-color: #6ca591;
+  color: var(--pr-white);
 }
+
 .failure {
+  width: 90%;
   opacity: 1;
-  color: red;
+  background-color: #cc5555;
+  color: var(--pr-white);
 }

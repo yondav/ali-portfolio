@@ -17,7 +17,6 @@ import {
 } from './components/pages';
 import Footer from './components/footer';
 import './App.css';
-import Nav from './components/nav';
 
 const App = () => {
   const theme = useContext(ThemeContext);

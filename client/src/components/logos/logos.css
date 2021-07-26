@@ -7,10 +7,12 @@ path {
   transition: var(--ease);
 }
 
-svg:hover {
+.icon-wrap:hover {
   transform: translateY(-0.2rem);
 }
 
 .icon-wrap {
+  width: fit-content;
   margin: 0.5rem;
+  transition: var(--ease);
 }
