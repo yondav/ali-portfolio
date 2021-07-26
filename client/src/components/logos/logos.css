@@ -1,0 +1,12 @@
+svg,
+rect,
+ellipse,
+stop,
+polygon,
+path {
+  transition: var(--ease);
+}
+
+svg:hover {
+  transform: translateY(-0.2rem);
+}

@@ -5,7 +5,19 @@ import 'react-awesome-slider/dist/styles.css';
 import Grow from '@material-ui/core/Grow';
 import { AiOutlineClose } from 'react-icons/ai';
 import './project_modal.css';
-import '../../assets/logos/logos.css';
+import {
+  Acrobat,
+  AfterEffects,
+  CreativeCloud,
+  Figma,
+  GoogleSlides,
+  Illustrator,
+  Indesign,
+  LightRoom,
+  Photoshop,
+  PowerPoint,
+  Sketch,
+} from '../logos';
 
 const useStyles = makeStyles(() => ({
   modal: { display: 'flex', justifyContent: 'center', alignItems: 'center' },
@@ -51,6 +63,17 @@ const ProjectModal = ({ open, handleClose, data }) => {
               </div>
             </div>
             <p>{data.description}</p>
+            {/* <Acrobat width={35} height={35} /> */}
+            {/* <AfterEffects width={35} height={35} /> */}
+            {/* <CreativeCloud width={35} height={35} /> */}
+            {/* <Figma width={35} height={35} /> */}
+            {/* <GoogleSlides width={35} height={35} /> */}
+            {/* <Illustrator width={35} height={35} /> */}
+            {/* <Indesign width={35} height={35} /> */}
+            <LightRoom width={35} height={35} />
+            <PowerPoint width={35} height={35} />
+            <Photoshop width={35} height={35} />
+            <Sketch width={35} height={35} />
           </div>
         </div>
       </Grow>
