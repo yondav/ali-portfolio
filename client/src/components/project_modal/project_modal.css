@@ -140,7 +140,7 @@
 
 @media only screen and (min-width: 989px) {
   .project-modal {
-    height: 75vh;
+    height: 85vh;
     flex-direction: row;
     justify-content: space-between;
   }

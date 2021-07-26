@@ -17,6 +17,7 @@ import {
 } from './components/pages';
 import Footer from './components/footer';
 import './App.css';
+import Nav from './components/nav';
 
 const App = () => {
   const theme = useContext(ThemeContext);
@@ -53,7 +54,7 @@ const App = () => {
     const logo = document.querySelector('.header-logo');
     const sticky = document.querySelector('nav').offsetHeight;
     const scrollCallBack = window.addEventListener('scroll', () => {
-      if (window.pageYOffset > sticky) {
+      if (window.pageYOffset >= sticky) {
         setSticky(true);
         logo.style.width = '10rem';
         stickyLogo.style.display = 'flex';
@@ -67,7 +68,7 @@ const App = () => {
     return () => {
       window.removeEventListener('scroll', scrollCallBack);
     };
-  });
+  }, [setSticky]);
 
   const updateMode = () => {
     darkMode
