@@ -28,7 +28,7 @@ export const presentation_design = [
     year: '2021',
     description:
       'Versatile and scalable template provided as fundamental for sales team to place own content. Style guide included in auto-populated deletable slides when template is launched as new document.',
-    tech: ['google-sheets'],
+    tech: ['google-slides'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812408/ali/presentation_design/sales_deck_gro_intelligence/sales_deck_gro_intelligence_thumbnail_m1use4.png',
     gallery: [

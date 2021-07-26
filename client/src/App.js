@@ -86,7 +86,7 @@ const App = () => {
       <AnimatePresence>
         <Switch location={location} key={location.pathname}>
           <Route exact path='/'>
-            <Redirect to='/digital_art' />
+            <Redirect to='/presentation_design' />
           </Route>
           <Route path='/digital_art'>
             <div className='page-wrap'>

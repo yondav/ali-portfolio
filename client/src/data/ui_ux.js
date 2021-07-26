@@ -10,17 +10,16 @@ export const ui_ux = [
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813888/ali/ui_ux/email_subscription_flow_gro_intelligence/_Email_Wireframes_Gro_Intelligence_Thumbnail_tugpf3.png',
     gallery: [
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813889/ali/ui_ux/email_subscription_flow_gro_intelligence/welcome_to_gro_paid_-_desktop_qjh8lp.png',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813889/ali/ui_ux/email_subscription_flow_gro_intelligence/welcome_to_gro_free_-_desktop_cfnclw.png',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813889/ali/ui_ux/email_subscription_flow_gro_intelligence/payment_failed_lsm5pl.png',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813889/ali/ui_ux/email_subscription_flow_gro_intelligence/upgrade_pitch_o0ssvw.png',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813889/ali/ui_ux/email_subscription_flow_gro_intelligence/subscription_is_ending_soon_gkmqfc.png',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813889/ali/ui_ux/email_subscription_flow_gro_intelligence/Thank_you_for_your_payment__free_wait_period_upgrade_qcfnkt.png',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813889/ali/ui_ux/email_subscription_flow_gro_intelligence/Group_cgbdqc.png',
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813889/ali/ui_ux/email_subscription_flow_gro_intelligence/free_trial_start_dsrhfp.png',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813889/ali/ui_ux/email_subscription_flow_gro_intelligence/free_tiral_offer_i9e0e7.png',
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813889/ali/ui_ux/email_subscription_flow_gro_intelligence/free_trial_ending_soon_btwx6d.png',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813889/ali/ui_ux/email_subscription_flow_gro_intelligence/Free_to_paid_after_time_of_free_use_zkr6t0.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813889/ali/ui_ux/email_subscription_flow_gro_intelligence/upgrade_pitch_o0ssvw.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1627265865/ali/ui_ux/email_subscription_flow_gro_intelligence/5_Free_to_paid_after_time_of_free_use_OPTION_FOR_MODAL_e0zuzb.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813889/ali/ui_ux/email_subscription_flow_gro_intelligence/payment_failed_lsm5pl.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813889/ali/ui_ux/email_subscription_flow_gro_intelligence/Thank_you_for_your_payment__free_wait_period_upgrade_qcfnkt.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1627265865/ali/ui_ux/email_subscription_flow_gro_intelligence/9_free_trial_offer_wzhamk.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1627265865/ali/ui_ux/email_subscription_flow_gro_intelligence/10_welcome_to_gro_paid_-_desktop_kdtqbn.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813889/ali/ui_ux/email_subscription_flow_gro_intelligence/subscription_is_ending_soon_gkmqfc.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813889/ali/ui_ux/email_subscription_flow_gro_intelligence/Group_cgbdqc.png',
     ],
   },
   // 1
@@ -49,7 +48,7 @@ export const ui_ux = [
     year: '2021',
     description:
       'In an attempt to gate video content on webpage, I went through various explorations of lo, mid and hi-fidelity mocks to try and make an inticing, yet functional form for this landing page. We need to collect company details in order to effectively segment and target personas, and gating our archived webinars was a means to to not only gather intel on general interest, but on who exactly was interested in what we had to say. ',
-    tech: [],
+    tech: ['figma'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813924/ali/ui_ux/gated_webinar_content/_gated_webinar_thumbnail_syjr16.png',
     gallery: [

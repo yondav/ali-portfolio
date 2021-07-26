@@ -10,3 +10,7 @@ path {
 svg:hover {
   transform: translateY(-0.2rem);
 }
+
+.icon-wrap {
+  margin: 0.5rem;
+}
