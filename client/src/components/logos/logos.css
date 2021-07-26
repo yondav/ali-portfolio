@@ -2,6 +2,7 @@ svg,
 rect,
 ellipse,
 stop,
+polygon,
 path {
   transition: var(--ease);
 }

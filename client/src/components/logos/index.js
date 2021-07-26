@@ -8,3 +8,4 @@ export { default as Indesign } from './Indesign';
 export { default as LightRoom } from './LightRoom';
 export { default as PowerPoint } from './PowerPoint';
 export { default as Photoshop } from './Photoshop';
+export { default as Sketch } from './Sketch';
