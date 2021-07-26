@@ -17,6 +17,7 @@ import {
   Photoshop,
   PowerPoint,
   Sketch,
+  XD,
 } from '../logos';
 
 const useStyles = makeStyles(() => ({
@@ -74,6 +75,7 @@ const ProjectModal = ({ open, handleClose, data }) => {
             <PowerPoint width={35} height={35} />
             <Photoshop width={35} height={35} />
             <Sketch width={35} height={35} />
+            <XD width={35} height={35} />
           </div>
         </div>
       </Grow>
