@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
+import { BsArrowDown } from 'react-icons/bs';
 import './information.css';
 import ContactModal from '../../contact_modal';
 import {
@@ -79,8 +80,9 @@ const Information = ({ pageVariants, pageStyle, pageTransition }) => {
                     />
                   </div>
                   <a href={resume} download={resume} className='resume'>
-                    DOWNLOAD CV
+                    DOWNLOAD RESUME <BsArrowDown className='download' />
                   </a>
+
                   <p className='bio'>
                     The role of a visual designer is not an entirely creative
                     one. I view my work as problem resolution through visual
