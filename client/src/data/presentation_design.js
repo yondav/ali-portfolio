@@ -44,7 +44,7 @@ export const presentation_design = [
   {
     title: 'Sequence Cards',
     client: ['Fly Louie'],
-    year: '2017',
+    year: '2020',
     description:
       'Digital backdrop during presentation by CEO of startup (Fly Louie). Later used as permanent branding slides on ipads in local airports. ',
     tech: ['indesign'],
