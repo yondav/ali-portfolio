@@ -39,7 +39,7 @@ export const digital_art = [
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812141/ali/digital_art/infographics/_standard_infographics_thumbnail_bkzd0l.png',
     gallery: [
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812141/ali/digital_art/infographics/PENCILGRAPHIC-01_avaprf.png',
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812141/ali/digital_art/infographics/circle_infographic-closer_look-02_lbz5n4.png',
+      'https://res.cloudinary.com/yup-schlepp/image/upload/v1627347459/ali/digital_art/infographics/circle_infographic-closer_look-02_w84rmx.png',
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812141/ali/digital_art/infographics/circle_chart_ioffxp.png',
     ],
   },
