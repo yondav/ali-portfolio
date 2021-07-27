@@ -50,7 +50,7 @@ export const digital_art = [
     year: '2012-2018',
     description:
       'Digital renderings of tactile and imagined materials. Created for printing and set into full square repeat for patterning and actual use.',
-    tech: ['photoshop'],
+    tech: ['photoshop', 'illustrator'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812005/ali/digital_art/digital_textiles/_digital_textiles_thumbnail_xfdz4a.png',
     gallery: [
