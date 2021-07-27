@@ -82,20 +82,14 @@ const Information = ({ pageVariants, pageStyle, pageTransition }) => {
                     DOWNLOAD CV
                   </a>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Magni, necessitatibus? Deserunt deleniti quam numquam omnis
-                    accusantium labore quia enim voluptate consequuntur
-                    recusandae minima officiis ipsum repellat quod dolore
-                    placeat, odio soluta sequi optio mollitia molestiae velit
-                    tenetur? Facere dolores harum saepe autem minima sapiente
-                    dolor dignissimos assumenda. Nesciunt dolores incidunt
-                    mollitia labore! Explicabo voluptate sequi et atque pariatur
-                    praesentium reiciendis quidem, voluptatem ut nam vero velit
-                    quae sint facilis nesciunt expedita culpa totam ratione
-                    alias ad! At, officia vel, tempore libero quibusdam
-                    praesentium saepe nulla veritatis fugit, obcaecati ipsam
-                    dolorum tempora velit voluptate temporibus eos eius
-                    consectetur porro debitis harum.
+                    The role of a visual designer is not an entirely creative
+                    one. I view my work as problem resolution through visual
+                    communication. I sift through concepts, ideas, sketches, and
+                    research with you to help identify the true focus of the
+                    project. From there, we can cleanly, efficiently, and
+                    effectively build the story. My strengths are branding and
+                    presentation design and assertion, UI/UX and web design,
+                    product design, and marketing design.
                   </p>
                 </div>
               </Grid>
