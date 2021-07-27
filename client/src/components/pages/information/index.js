@@ -81,7 +81,7 @@ const Information = ({ pageVariants, pageStyle, pageTransition }) => {
                   <a href={resume} download={resume} className='resume'>
                     DOWNLOAD CV
                   </a>
-                  <p>
+                  <p className='bio'>
                     The role of a visual designer is not an entirely creative
                     one. I view my work as problem resolution through visual
                     communication. I sift through concepts, ideas, sketches, and

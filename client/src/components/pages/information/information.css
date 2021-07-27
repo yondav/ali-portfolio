@@ -64,7 +64,13 @@
   transform: translateY(-0.5rem);
 }
 
+.bio {
+  margin: 0;
+  text-align: justify;
+}
+
 .tech-cont {
+  margin-bottom: 0.5rem;
   display: flex;
   flex-wrap: wrap;
 }
