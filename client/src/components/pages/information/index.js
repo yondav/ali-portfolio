@@ -79,7 +79,11 @@ const Information = ({ pageVariants, pageStyle, pageTransition }) => {
                       alt='Alison Lamb'
                     />
                   </div>
-                  <a href={resume} download={resume} className='resume'>
+                  <a
+                    href={resume}
+                    download='alison_lamb_resume_2021'
+                    className='resume'
+                  >
                     DOWNLOAD RESUME <BsArrowDown className='download' />
                   </a>
 
