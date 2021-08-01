@@ -47,7 +47,7 @@ export const ui_ux = [
     client: ['Gro Intelligence'],
     year: '2021',
     description:
-      'In an attempt to gate video content on webpage, I went through various explorations of lo, mid and hi-fidelity mocks to try and make an inticing, yet functional form for this landing page. We need to collect company details in order to effectively segment and target personas, and gating our archived webinars was a means to to not only gather intel on general interest, but on who exactly was interested in what we had to say. ',
+      'In an attempt to gate video content on webpage, I went through various explorations of lo, mid and hi-fidelity mocks to try and make an inticing, yet functional form for this landing page. We need to collect company details in order to effectively segment and target personas, and gating our archived webinars was a means to not only gather intel on general interest, but on who exactly was interested in what we had to say. ',
     tech: ['figma'],
     thumbnail:
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626813924/ali/ui_ux/gated_webinar_content/_gated_webinar_thumbnail_syjr16.png',
