@@ -182,3 +182,56 @@ exports.deletePrintDesignProject = async (req, res, nex) => {
     next(err);
   }
 };
+
+// for UI/UX page
+exports.createUIUXProject = async (req, res, next) => {
+  try {
+    const project = await UIUX.create(req.body);
+
+    res.status(201).json(project);
+  } catch (err) {
+    next(err);
+  }
+};
+
+exports.editUIUXProject = async (req, res, next) => {
+  const id = { _id: req.params.id };
+
+  try {
+    const project = await UIUX.findOneAndUpdate(id, req.body);
+
+    if (!project) {
+      return next(
+        new ErrorResponse(
+          `Invalid: We don't have a project with the id: ${req.params.id} in the database`,
+          400
+        )
+      );
+    }
+
+    res.status(201).json(project);
+  } catch (err) {
+    next(err);
+  }
+};
+
+exports.deleteUIUXProject = async (req, res, nex) => {
+  const id = { _id: req.params.id };
+
+  try {
+    const project = await UIUX.findOneAndDelete(id);
+
+    if (!project) {
+      return next(
+        new ErrorResponse(
+          `Invalid: We don't have a project with the id: ${req.params.id} in the database`,
+          400
+        )
+      );
+    }
+
+    res.status(200).json(project);
+  } catch (err) {
+    next(err);
+  }
+};

@@ -3,6 +3,7 @@ const {
   getDigitalArtProjects,
   getPresentationDesignProjects,
   getPrintDesignProjects,
+  getUIUXProjects,
 } = require('../../../controllers/api');
 
 exports.getRoutes = [
@@ -21,5 +22,9 @@ exports.getRoutes = [
   {
     path: '/print_design',
     func: getPrintDesignProjects,
+  },
+  {
+    path: '/ui_ux',
+    func: getUIUXProjects,
   },
 ];

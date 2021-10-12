@@ -45,3 +45,13 @@ exports.getPrintDesignProjects = async (req, res, next) => {
     next(err);
   }
 };
+
+exports.getUIUXProjects = async (req, res, next) => {
+  try {
+    const projects = await UIUX.find({});
+
+    res.status(200).json(projects);
+  } catch (err) {
+    next(err);
+  }
+};
