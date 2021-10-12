@@ -3,10 +3,10 @@ const mongoose = require('mongoose');
 const Project = new mongoose.Schema({
   title: String,
   client: Array,
-  year: String,
+  year: Array,
   description: String,
   tech: Array,
-  thumbnail: String,
+  thumbnail: { width: Number, src: String },
   gallery: Array,
 });
 

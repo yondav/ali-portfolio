@@ -11,7 +11,8 @@
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build",
-    "watch": "nodemon server.js"
+    "watch": "nodemon server.js",
+    "seed": "node seeders"
   },
   "repository": {
     "type": "git",
