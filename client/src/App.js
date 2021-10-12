@@ -8,13 +8,8 @@ import { Switch, Route, useLocation, Redirect } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { ThemeContext } from './context/ThemeContext';
 import Header from './components/header';
-import {
-  DigitalArt,
-  PrintDesign,
-  PresentationDesign,
-  UIUX,
-  Information,
-} from './components/pages';
+import Project from './components/pages/project';
+import Information from './components/pages/information';
 import Footer from './components/footer';
 import './App.css';
 
@@ -90,38 +85,22 @@ const App = () => {
           </Route>
           <Route path='/digital_art'>
             <div className='page-wrap'>
-              <DigitalArt
-                pageVariants={variant}
-                pageStyle={pageStyle}
-                pageTransition={pageTransition}
-              />
+              <Project url='digital_art' pageVariants={variant} />
             </div>
           </Route>
           <Route path='/print_design'>
             <div className='page-wrap'>
-              <PrintDesign
-                pageVariants={variant}
-                pageStyle={pageStyle}
-                pageTransition={pageTransition}
-              />
+              <Project url='print_design' pageVariants={variant} />
             </div>
           </Route>
           <Route path='/presentation_design'>
             <div className='page-wrap'>
-              <PresentationDesign
-                pageVariants={variant}
-                pageStyle={pageStyle}
-                pageTransition={pageTransition}
-              />
+              <Project url='presentation_design' pageVariants={variant} />
             </div>
           </Route>
           <Route path='/ui_ux'>
             <div className='page-wrap'>
-              <UIUX
-                pageVariants={variant}
-                pageStyle={pageStyle}
-                pageTransition={pageTransition}
-              />
+              <Project url='ui_ux' pageVariants={variant} />
             </div>
           </Route>
           <Route path='/information'>

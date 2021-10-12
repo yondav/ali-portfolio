@@ -1,12 +1,30 @@
-export { default as Acrobat } from './Acrobat';
-export { default as AfterEffects } from './AfterEffects';
-export { default as CreativeCloud } from './CreativeCloud';
-export { default as Figma } from './Figma';
-export { default as GoogleSlides } from './GoogleSlides';
-export { default as Illustrator } from './Illustrator';
-export { default as Indesign } from './Indesign';
-export { default as LightRoom } from './LightRoom';
-export { default as PowerPoint } from './PowerPoint';
-export { default as Photoshop } from './Photoshop';
-export { default as Sketch } from './Sketch';
-export { default as XD } from './XD';
+import Acrobat from './Acrobat';
+import AfterEffects from './AfterEffects';
+import CreativeCloud from './CreativeCloud';
+import Figma from './Figma';
+import GoogleSlides from './GoogleSlides';
+import Illustrator from './Illustrator';
+import Indesign from './Indesign';
+import LightRoom from './LightRoom';
+import PowerPoint from './PowerPoint';
+import Photoshop from './Photoshop';
+import Sketch from './Sketch';
+import XD from './XD';
+
+export const logos = [
+  { name: 'figma', el: Figma },
+  { name: 'sketch', el: Sketch },
+  { name: 'creative cloud', el: CreativeCloud },
+  { name: 'illustrator', el: Illustrator },
+  { name: 'photoshop', el: Photoshop },
+  { name: 'lightroom', el: LightRoom },
+  { name: 'indesign', el: Indesign },
+  { name: 'after effects', el: AfterEffects },
+  { name: 'xd', el: XD },
+  { name: 'acrobat', el: Acrobat },
+  { name: 'google slides', el: GoogleSlides },
+  { name: 'powerpoint', el: PowerPoint },
+];
+
+export const logoFilter = (match) =>
+  logos.filter((logo) => logo.name === match);

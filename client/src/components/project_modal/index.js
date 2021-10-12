@@ -6,15 +6,7 @@ import Grow from '@material-ui/core/Grow';
 import { AiOutlineClose } from 'react-icons/ai';
 import { GiExpand } from 'react-icons/gi';
 import './project_modal.css';
-import {
-  Figma,
-  GoogleSlides,
-  Illustrator,
-  Indesign,
-  Photoshop,
-  PowerPoint,
-  Sketch,
-} from '../logos';
+import { logoFilter } from '../logos';
 
 const useStyles = makeStyles(() => ({
   modal: { display: 'flex', justifyContent: 'center', alignItems: 'center' },
@@ -32,27 +24,6 @@ const ProjectModal = ({ open, handleClose, data }) => {
     window.addEventListener('resize', updateMedia);
     return () => window.removeEventListener('resize', updateMedia);
   }, []);
-
-  const techStacks = (tech) => {
-    switch (tech) {
-      case 'sketch':
-        return <Sketch width={'1.8rem'} height={'1.8rem'} />;
-      case 'illustrator':
-        return <Illustrator width={'1.8rem'} height={'1.8rem'} />;
-      case 'photoshop':
-        return <Photoshop width={'1.8rem'} height={'1.8rem'} />;
-      case 'powerpoint':
-        return <PowerPoint width={'1.8rem'} height={'1.8rem'} />;
-      case 'google-slides':
-        return <GoogleSlides width={'1.8rem'} height={'1.8rem'} />;
-      case 'indesign':
-        return <Indesign width={'1.8rem'} height={'1.8rem'} />;
-      case 'figma':
-        return <Figma width={'1.8rem'} height={'1.8rem'} />;
-      default:
-        return '';
-    }
-  };
 
   return (
     <Modal
@@ -109,9 +80,13 @@ const ProjectModal = ({ open, handleClose, data }) => {
             </div>
             <p>{data.description}</p>
             <div className='tech'>
-              {data.tech.map((t, index) => (
-                <div key={index}>{techStacks(t)}</div>
-              ))}
+              {data.tech.map((te, i) =>
+                React.createElement(logoFilter(te)[0].el, {
+                  key: i,
+                  width: '1.5rem',
+                  height: '1.5rem',
+                })
+              )}
             </div>
           </div>
         </div>

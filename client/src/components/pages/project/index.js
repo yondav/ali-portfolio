@@ -5,14 +5,15 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import API from '../../../utils/API';
 import Thumbnail from '../../thumbnail';
+import { pageTransition, pageStyle } from '../../../utils/animationTransitions';
 
-const PrintDesign = ({ pageVariants, pageStyle, pageTransition }) => {
+const Project = ({ pageVariants, url }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [data, setData] = useState([]);
 
   const { response, loading, error } = API({
     method: 'get',
-    url: '/api/print_design',
+    url: `/api/${url}`,
   });
 
   useEffect(() => {
@@ -23,7 +24,7 @@ const PrintDesign = ({ pageVariants, pageStyle, pageTransition }) => {
       // add spinner
       console.log({ loading: loading, err: error });
     }
-  }, [isLoaded, response, loading, error]);
+  }, [isLoaded, response, error, loading]);
 
   const useStyles = makeStyles((theme) => ({
     root: {
@@ -73,4 +74,4 @@ const PrintDesign = ({ pageVariants, pageStyle, pageTransition }) => {
   );
 };
 
-export default PrintDesign;
+export default Project;
