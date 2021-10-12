@@ -3,23 +3,30 @@ import { motion } from 'framer-motion';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import { presentation_design } from '../../../data/presentation_design';
+import API from '../../../utils/API';
 import Thumbnail from '../../thumbnail';
 
 const PresentationDesign = ({ pageVariants, pageStyle, pageTransition }) => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [data, setData] = useState([]);
+
+  const { response, loading, error } = API({
+    method: 'get',
+    url: '/api/presentation_design',
+  });
 
   useEffect(() => {
-    console.log(document.querySelector('.nav').offsetWidth);
-    console.log(isLoaded);
-    if (document.querySelector('.nav').offsetWidth) {
+    if (document.querySelector('.nav').offsetWidth && response) {
       setIsLoaded(true);
+      setData(response);
+    } else {
+      // add spinner
+      console.log({ loading: loading, err: error });
     }
-  }, [isLoaded]);
+  }, [isLoaded, response, loading, error]);
 
   const useStyles = makeStyles((theme) => ({
     root: {
-      // flexGrow: 1,
       width: isLoaded && document.querySelector('.nav').offsetWidth,
       paddingBottom: '5rem',
     },
@@ -51,30 +58,11 @@ const PresentationDesign = ({ pageVariants, pageStyle, pageTransition }) => {
                 width: '100%',
               }}
             >
-              <Grid item xs={12}>
-                <Thumbnail data={presentation_design[0]} />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Thumbnail data={presentation_design[1]} />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Thumbnail data={presentation_design[2]} />
-              </Grid>
-              <Grid item xs={12}>
-                <Thumbnail data={presentation_design[3]} />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Thumbnail data={presentation_design[4]} />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Thumbnail data={presentation_design[5]} />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Thumbnail data={presentation_design[6]} />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Thumbnail data={presentation_design[7]} />
-              </Grid>
+              {data.map((proj, i) => (
+                <Grid item xs={12} md={proj.thumbnail.width} key={i}>
+                  <Thumbnail data={proj} />
+                </Grid>
+              ))}
             </Grid>
           </Box>
         </motion.div>

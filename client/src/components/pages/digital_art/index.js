@@ -3,23 +3,30 @@ import { motion } from 'framer-motion';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import { digital_art } from '../../../data/digital_art';
+import API from '../../../utils/API';
 import Thumbnail from '../../thumbnail';
 
-const DigitalArt = ({ pageVariants, pageStyle, pageTransition }) => {
+const DigitalArt = ({ pageVariants, pageStyle, pageTransition, url }) => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [data, setData] = useState([]);
+
+  const { response, loading, error } = API({
+    method: 'get',
+    url: '/api/digital_art',
+  });
 
   useEffect(() => {
-    console.log(document.querySelector('.nav').offsetWidth);
-    console.log(isLoaded);
-    if (document.querySelector('.nav').offsetWidth) {
+    if (document.querySelector('.nav').offsetWidth && response) {
       setIsLoaded(true);
+      setData(response);
+    } else {
+      // add spinner
+      console.log({ loading: loading, err: error });
     }
-  }, [isLoaded]);
+  }, [isLoaded, response, error, loading]);
 
   const useStyles = makeStyles((theme) => ({
     root: {
-      // flexGrow: 1,
       width: isLoaded && document.querySelector('.nav').offsetWidth,
       paddingBottom: '5rem',
     },
@@ -51,18 +58,11 @@ const DigitalArt = ({ pageVariants, pageStyle, pageTransition }) => {
                 width: '100%',
               }}
             >
-              <Grid item xs={12} md={6}>
-                <Thumbnail data={digital_art[0]} />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Thumbnail data={digital_art[1]} />
-              </Grid>
-              <Grid item xs={12}>
-                <Thumbnail data={digital_art[2]} />
-              </Grid>
-              <Grid item xs={12}>
-                <Thumbnail data={digital_art[3]} />
-              </Grid>
+              {data.map((proj, i) => (
+                <Grid item xs={12} md={proj.thumbnail.width} key={i}>
+                  <Thumbnail data={proj} />
+                </Grid>
+              ))}
             </Grid>
           </Box>
         </motion.div>

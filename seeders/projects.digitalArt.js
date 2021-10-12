@@ -9,8 +9,10 @@ const seeds = [
     description:
       'Iconographic details for a branded sales presentation. Designed in collaboration with analysts presenting climate and technology related material.',
     tech: ['sketch'],
-    thumbnail:
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812096/ali/digital_art/iconography/isometric_exploration_fju5is.png',
+    thumbnail: {
+      width: 6,
+      src: 'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812096/ali/digital_art/iconography/isometric_exploration_fju5is.png',
+    },
     gallery: [
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812096/ali/digital_art/iconography/isometric_exploration_fju5is.png',
     ],
@@ -23,8 +25,10 @@ const seeds = [
     description:
       'Self-assigned exploration in illustrator. Honing skills in layer opacities, color work, and composition.',
     tech: ['illustrator'],
-    thumbnail:
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626968040/ali/digital_art/glassy_planet/glassy_planet_rgwugp.png',
+    thumbnail: {
+      width: 6,
+      src: 'https://res.cloudinary.com/yup-schlepp/image/upload/v1626968040/ali/digital_art/glassy_planet/glassy_planet_rgwugp.png',
+    },
     gallery: [
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812044/ali/digital_art/glassy_planet/glassy_planet-01_gnrcvh.png',
     ],
@@ -37,8 +41,10 @@ const seeds = [
     description:
       'Self-assigned exploration in illustrator. Honing skills in layer opacities, color work, layout and information hierarchy.',
     tech: ['illustrator'],
-    thumbnail:
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812141/ali/digital_art/infographics/_standard_infographics_thumbnail_bkzd0l.png',
+    thumbnail: {
+      width: 12,
+      src: 'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812141/ali/digital_art/infographics/_standard_infographics_thumbnail_bkzd0l.png',
+    },
     gallery: [
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812141/ali/digital_art/infographics/PENCILGRAPHIC-01_avaprf.png',
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1627347459/ali/digital_art/infographics/circle_infographic-closer_look-02_w84rmx.png',
@@ -53,8 +59,10 @@ const seeds = [
     description:
       'Digital renderings of tactile and imagined materials. Created for printing and set into full square repeat for patterning and actual use.',
     tech: ['photoshop', 'illustrator'],
-    thumbnail:
-      'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812005/ali/digital_art/digital_textiles/_digital_textiles_thumbnail_xfdz4a.png',
+    thumbnail: {
+      width: 12,
+      src: 'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812005/ali/digital_art/digital_textiles/_digital_textiles_thumbnail_xfdz4a.png',
+    },
     gallery: [
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812004/ali/digital_art/digital_textiles/web_wovens5_ejwgf3.jpg',
       'https://res.cloudinary.com/yup-schlepp/image/upload/v1626812004/ali/digital_art/digital_textiles/web_woven3_fksruy.jpg',

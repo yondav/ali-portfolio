@@ -13,7 +13,7 @@ const Thumbnail = ({ data }) => {
     <>
       <div className='thumbnail' onClick={handleOpen}>
         <div width='100%' className='thumbnail-cont'>
-          <img src={data.thumbnail} alt={data.title} width='100%' />
+          <img src={data.thumbnail.src} alt={data.title} width='100%' />
         </div>
         <div className='thumbnail-text'>
           <p>{data.title}</p>
