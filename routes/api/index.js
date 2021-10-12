@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const { users } = require('./users');
+const { getRoutes } = require('./get_routes');
 
-const api = [...users];
+const api = [...getRoutes];
 
 api.map((endpoint) => {
   router.route(`${endpoint.path}`).get(endpoint.func);
