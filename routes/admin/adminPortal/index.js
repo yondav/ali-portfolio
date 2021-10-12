@@ -6,6 +6,9 @@ const {
   createPresentationDesignProject,
   editPresentationDesignProject,
   deletePresentationDesignProject,
+  createPrintDesignProject,
+  editPrintDesignProject,
+  deletePrintDesignProject,
 } = require('../../../controllers/admin/adminPortal');
 const { protect } = require('../../../middleware/auth');
 
@@ -49,6 +52,24 @@ exports.adminPortal = [
   {
     path: '/presentation_design/:id',
     func: deletePresentationDesignProject,
+    crud: 'delete',
+    middleware: [protect],
+  },
+  {
+    path: '/new_project/print_design',
+    func: createPrintDesignProject,
+    crud: 'post',
+    middleware: [protect],
+  },
+  {
+    path: '/print_design/:id',
+    func: editPrintDesignProject,
+    crud: 'put',
+    middleware: [protect],
+  },
+  {
+    path: '/print_design/:id',
+    func: deletePrintDesignProject,
     crud: 'delete',
     middleware: [protect],
   },

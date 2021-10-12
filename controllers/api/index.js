@@ -1,5 +1,10 @@
 const User = require('../../models/User');
-const { DigitalArt, PresentationDesign } = require('../../models/Project');
+const {
+  DigitalArt,
+  PresentationDesign,
+  PrintDesign,
+  UIUX,
+} = require('../../models/Project');
 
 exports.getUser = async (req, res, next) => {
   try {
@@ -24,6 +29,16 @@ exports.getDigitalArtProjects = async (req, res, next) => {
 exports.getPresentationDesignProjects = async (req, res, next) => {
   try {
     const projects = await PresentationDesign.find({});
+
+    res.status(200).json(projects);
+  } catch (err) {
+    next(err);
+  }
+};
+
+exports.getPrintDesignProjects = async (req, res, next) => {
+  try {
+    const projects = await PrintDesign.find({});
 
     res.status(200).json(projects);
   } catch (err) {

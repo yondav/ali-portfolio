@@ -2,6 +2,7 @@ const {
   getUser,
   getDigitalArtProjects,
   getPresentationDesignProjects,
+  getPrintDesignProjects,
 } = require('../../../controllers/api');
 
 exports.getRoutes = [
@@ -16,5 +17,9 @@ exports.getRoutes = [
   {
     path: '/presentation_design',
     func: getPresentationDesignProjects,
+  },
+  {
+    path: '/print_design',
+    func: getPrintDesignProjects,
   },
 ];
