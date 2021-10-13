@@ -1,17 +1,15 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useReducer, useEffect } from 'react';
 
 export const AdminContext = createContext();
 
-const adminState = {
-  admin: false,
-};
+const adminState = { loggedIn: false };
 
 const adminReducer = (state, action) => {
   switch (action.type) {
-    case 'ADMIN':
-      return { admin: true };
-    case 'NOTADMIN':
+    case 'ISNOTADMIN':
       return { admin: false };
+    case 'ISADMIN':
+      return { admin: true };
     default:
       return state;
   }

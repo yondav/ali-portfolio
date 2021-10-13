@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import API from '../../../utils/API';
+import useAPI from '../../../hooks/useAPI';
 import Thumbnail from '../../thumbnail';
 import { pageTransition, pageStyle } from '../../../utils/animationTransitions';
 
@@ -11,7 +11,7 @@ const Project = ({ pageVariants, url }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [data, setData] = useState([]);
 
-  const { response, loading, error } = API({
+  const { response, loading, error } = useAPI({
     method: 'get',
     url: `/api${url}`,
   });

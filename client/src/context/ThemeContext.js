@@ -1,8 +1,8 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useReducer, useEffect } from 'react';
 
 export const ThemeContext = createContext();
 
-const themeState = {
+const themeState = JSON.parse(localStorage.getItem('theme')) || {
   darkMode: false,
 };
 
@@ -19,6 +19,11 @@ const themeReducer = (state, action) => {
 
 export function ThemeProvider(props) {
   const [state, dispatch] = useReducer(themeReducer, themeState);
+
+  useEffect(
+    () => localStorage.setItem('theme', JSON.stringify(state)),
+    [state]
+  );
 
   return (
     <ThemeContext.Provider value={{ state, dispatch }}>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   pageVariants,
   pageTransition,
@@ -6,8 +6,7 @@ import {
 } from './utils/animationTransitions';
 import { Switch, Route, useLocation, Redirect } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import { ThemeContext } from './context/ThemeContext';
-import { AdminContext } from './context/AdminContext';
+import { debouncer } from './utils/debouncer';
 import Header from './components/header';
 import Project from './components/pages/project';
 import Information from './components/pages/information';
@@ -25,78 +24,37 @@ const projectPages = [
 ];
 
 const App = () => {
-  const theme = useContext(ThemeContext);
-  const isAdmin = useContext(AdminContext);
-  const darkMode = theme.state.darkMode;
   const location = useLocation();
   const [isSticky, setSticky] = useState(false);
   const [variant, setVariant] = useState(pageVariants);
 
-  // for dark mode
-  useEffect(() => {
-    const logos = document.querySelectorAll('.header-logo');
-
-    if (darkMode) {
-      document.querySelector('body').classList = 'dark';
-      logos.forEach((logo) =>
-        logo.classList.contains('to-black')
-          ? logo.classList.replace('to-black', 'to-white')
-          : logo.classList.add('to-white')
-      );
-    } else {
-      document.querySelector('body').classList = '';
-      logos.forEach((logo) =>
-        logo.classList.contains('to-white')
-          ? logo.classList.replace('to-white', 'to-black')
-          : logo.classList.add('to-black')
-      );
-    }
-  }, [darkMode]);
-
-  // for sticky nav
   useEffect(() => {
     const nav = document.querySelector('nav');
     const stickyLogo = document.querySelector('.sticky-logo-cont');
     const logo = document.querySelector('.header-logo');
-    const stickyHandler = (width) => {
-      setSticky(true);
-      logo.style.width = `${width}rem`;
-      stickyLogo.style.display = 'flex';
-      nav.classList.add('sticky');
-    };
-
-    if (location.pathname.includes('admin')) {
-      stickyHandler(3);
-    }
-
-    const scrollCallBack = window.addEventListener('scroll', () => {
+    const stickyHandler = debouncer(() => {
       if (window.pageYOffset >= nav.offsetHeight) {
-        stickyHandler(10);
+        setSticky(true);
+        logo.style.width = `10rem`;
+        stickyLogo.style.display = 'flex';
+        nav.classList.add('sticky');
       } else {
         setSticky(false);
         nav.classList.remove('sticky');
         stickyLogo.style.display = 'none';
       }
-    });
+    }, 50);
+
+    const scrollCallBack = window.addEventListener('scroll', stickyHandler);
+
     return () => {
       window.removeEventListener('scroll', scrollCallBack);
     };
   }, [setSticky, location]);
 
-  const updateMode = () => {
-    darkMode
-      ? theme.dispatch({ type: 'LIGHTMODE' })
-      : theme.dispatch({ type: 'DARKMODE' });
-  };
-
   return (
     <>
-      <Header
-        updateMode={updateMode}
-        variant={variant}
-        setVariant={setVariant}
-        location={location}
-      />
+      <Header variant={variant} setVariant={setVariant} location={location} />
       <AnimatePresence>
         <Switch location={location}>
           <Route exact path='/'>
@@ -130,7 +88,7 @@ const App = () => {
           </Route>
         </Switch>
       </AnimatePresence>
-      {isSticky && <Footer updateMode={updateMode} />}
+      {isSticky && <Footer />}
     </>
   );
 };

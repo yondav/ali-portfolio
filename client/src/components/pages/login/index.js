@@ -1,52 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import axios from 'axios';
+import { useHistory } from 'react-router-dom';
+import useAdminContext from '../../../hooks/useAdminContext';
 import Input from '../../input';
 import './login.css';
 
 const Login = () => {
+  const { login, isLoggedIn } = useAdminContext();
+  let history = useHistory();
   const [statusMessage, setStatusMessage] = useState('Message');
 
-  const { register, handleSubmit, errors } = useForm();
-  const onSubmit = async (res) => {
-    const statusMessage = document.querySelector('.status-message');
+  useEffect(() => {
+    const sm = document.querySelector('.status-message');
 
-    const config = {
-      header: {
-        'Content-Type': 'application/json',
-      },
-    };
-
-    try {
-      const { data } = await axios.post(
-        '/admin/login',
-        {
-          email: res.email,
-          password: res.password,
-        },
-        config
-      );
-
-      localStorage.setItem('authToken', data.token);
-
+    if (isLoggedIn) {
       setStatusMessage('Welcome Back Alison');
-      statusMessage.className = 'status-message success';
+      sm.className = 'status-message success';
       setTimeout(() => {
-        statusMessage.className = 'status-message';
-        window.location.replace('/admin');
+        sm.className = 'status-message';
+        history.push('/admin');
       }, 3000);
-      console.log(data);
-    } catch (err) {
-      console.log(err);
-      setStatusMessage("Invalid Credentials. Prove You're Alison!");
-      statusMessage.className = 'status-message failure';
-      setTimeout(() => (statusMessage.className = 'status-message'), 5000);
+    } else {
+      setStatusMessage('Welcome Back Alison');
+      sm.className = 'status-message failure';
+      setTimeout(() => (sm.className = 'status-message'), 5000);
     }
+  }, [isLoggedIn, history]);
+
+  const { register, handleSubmit, errors } = useForm();
+
+  const onSubmit = async (res) => {
+    login(res.email, res.password);
+    document.querySelector('.status-message').style.display = 'block';
   };
 
   return (
     <div className='login-card'>
-      <p className='status-message'>{statusMessage}</p>
+      <p className='status-message' style={{ display: 'none' }}>
+        {statusMessage}
+      </p>
       <form id='login-form' onSubmit={handleSubmit(onSubmit)}>
         <Input
           type='email'

@@ -10,7 +10,7 @@ const ErrorResponse = require('../../utils/errorResponse');
 // for info page
 exports.editUser = async (req, res, next) => {
   try {
-    const query = { username: 'ali' };
+    const query = { username: 'admin' };
     const ali = await User.findOneAndUpdate(query, req.body);
 
     if (!ali) {

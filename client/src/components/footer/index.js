@@ -4,9 +4,11 @@ import {
   RiInstagramLine,
   RiContrastLine,
 } from 'react-icons/ri';
+import useThemeContext from '../../hooks/useThemeContext';
 import './footer.css';
 
-const Footer = ({ updateMode }) => {
+const Footer = () => {
+  const { updateMode } = useThemeContext();
   return (
     <footer>
       <div className='footer-socials'></div>

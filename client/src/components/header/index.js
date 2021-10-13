@@ -5,6 +5,7 @@ import {
   RiInstagramLine,
   RiContrastLine,
 } from 'react-icons/ri';
+import useThemeContext from '../../hooks/useThemeContext';
 import Nav from '../nav';
 import './header.css';
 
@@ -21,7 +22,9 @@ const socials = [
   },
 ];
 
-const Header = ({ updateMode, variant, setVariant, location }) => {
+const Header = ({ variant, setVariant, location }) => {
+  const { updateMode } = useThemeContext();
+
   return (
     <div className='header-cont'>
       <header className='header'>

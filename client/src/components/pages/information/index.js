@@ -4,7 +4,7 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { BsArrowDown } from 'react-icons/bs';
-import API from '../../../utils/API';
+import useAPI from '../../../hooks/useAPI';
 import './information.css';
 import ContactModal from '../../contact_modal';
 import { logoFilter } from '../../logos';
@@ -15,7 +15,7 @@ const Information = ({ pageVariants, pageStyle, pageTransition }) => {
   const [open, setOpen] = useState(false);
   const [data, setData] = useState([]);
 
-  const { response, loading, error } = API({
+  const { response, loading, error } = useAPI({
     method: 'get',
     url: `/api/users`,
   });

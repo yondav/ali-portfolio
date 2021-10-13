@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const API = ({ url, method, body = null, headers = null }) => {
+export default function useAPI({ url, method, body = null, headers = null }) {
   const [response, setResponse] = useState(null);
   const [error, setError] = useState('');
   const [loading, setloading] = useState(true);
@@ -24,6 +24,4 @@ const API = ({ url, method, body = null, headers = null }) => {
   }, [method, url, body, headers]);
 
   return { response, error, loading };
-};
-
-export default API;
+}
