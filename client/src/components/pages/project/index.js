@@ -13,7 +13,7 @@ const Project = ({ pageVariants, url }) => {
 
   const { response, loading, error } = API({
     method: 'get',
-    url: `/api/${url}`,
+    url: `/api${url}`,
   });
 
   useEffect(() => {

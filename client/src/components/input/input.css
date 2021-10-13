@@ -1,0 +1,36 @@
+form {
+  flex-basis: 100%;
+  flex-grow: 2;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+input,
+textarea {
+  width: 90%;
+  padding: 1rem;
+  background-color: transparent;
+  font: var(--font);
+  border: none;
+  border-bottom: 1px solid var(--pr-black);
+  transition: var(--ease);
+}
+
+textarea {
+  height: 10em;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--dust-pink);
+}
+
+input:focus,
+textarea:focus {
+  background-color: var(--btn);
+  outline: none;
+  border-radius: var(--radius);
+}

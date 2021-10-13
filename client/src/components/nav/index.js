@@ -82,7 +82,7 @@ const Nav = ({ setVariant, location }) => {
 
   const updateMedia = () => setMobile(window.innerWidth < 720);
 
-  const handleChange = (event, newValue) => {
+  const handleChange = (e, newValue) => {
     newValue > value ? setVariant(pageVariants) : setVariant(pageVariantsAlt);
     setValue(newValue);
   };
@@ -107,17 +107,15 @@ const Nav = ({ setVariant, location }) => {
 
   const mapRoutesMobile = useCallback(
     () =>
-      routes.map((route, index) => (
+      routes.map((route, i) => (
         <NavTab
-          key={index}
+          key={i}
           label={route.label}
           component={NavLink}
           to={route.to}
           onClick={(e) => {
-            index > value
-              ? setVariant(pageVariants)
-              : setVariant(pageVariantsAlt);
-            setValue(index);
+            i > value ? setVariant(pageVariants) : setVariant(pageVariantsAlt);
+            setValue(i);
           }}
         />
       )),
@@ -126,13 +124,8 @@ const Nav = ({ setVariant, location }) => {
 
   const mapRoutes = useCallback(
     () =>
-      routes.map((route, index) => (
-        <NavTab
-          key={index}
-          label={route.label}
-          component={NavLink}
-          to={route.to}
-        />
+      routes.map((route, i) => (
+        <NavTab key={i} label={route.label} component={NavLink} to={route.to} />
       )),
     [routes]
   );

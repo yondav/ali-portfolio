@@ -8,6 +8,19 @@ import {
 import Nav from '../nav';
 import './header.css';
 
+const socials = [
+  {
+    url: 'https://www.linkedin.com/in/alison-lamb-a3173312/',
+    title: 'linkedin',
+    icon: RiLinkedinFill,
+  },
+  {
+    url: 'https://www.instagram.com/alilambop/?hl=en',
+    title: 'instagram',
+    icon: RiInstagramLine,
+  },
+];
+
 const Header = ({ updateMode, variant, setVariant, location }) => {
   return (
     <div className='header-cont'>
@@ -22,28 +35,29 @@ const Header = ({ updateMode, variant, setVariant, location }) => {
                 />
               </div>
               <div className='socials'>
-                <a
-                  href='https://www.linkedin.com/in/alison-lamb-a3173312/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <RiLinkedinFill className='social-icons' />
-                </a>
-                <a
-                  href='https://www.instagram.com/alilambop/?hl=en'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <RiInstagramLine className='social-icons' />
-                </a>
+                {socials.map((social, i) => (
+                  <a
+                    href={social.url}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    title={social.title}
+                    key={i}
+                  >
+                    {React.createElement(social.icon, {
+                      className: 'social-icons',
+                    })}
+                  </a>
+                ))}
               </div>
             </div>
           </Grid>
-          <Grid item xs={12}>
-            <div className='header-logo-cont'>
-              <i className='header-logo to-black' />
-            </div>
-          </Grid>
+          {!location.pathname.includes('admin') && (
+            <Grid item xs={12}>
+              <div className='header-logo-cont'>
+                <i className='header-logo to-black' />
+              </div>
+            </Grid>
+          )}
         </Grid>
       </header>
       <Nav variant={variant} setVariant={setVariant} location={location} />

@@ -7,18 +7,30 @@ import {
 import { Switch, Route, useLocation, Redirect } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { ThemeContext } from './context/ThemeContext';
+import { AdminContext } from './context/AdminContext';
 import Header from './components/header';
 import Project from './components/pages/project';
 import Information from './components/pages/information';
 import Footer from './components/footer';
+import AdminRoute from './components/admin_route';
+import AdminPortal from './components/pages/admin_portal';
+import Login from './components/pages/login';
 import './App.css';
+
+const projectPages = [
+  '/digital_art',
+  '/print_design',
+  '/presentation_design',
+  '/ui_ux',
+];
 
 const App = () => {
   const theme = useContext(ThemeContext);
+  const isAdmin = useContext(AdminContext);
   const darkMode = theme.state.darkMode;
+  const location = useLocation();
   const [isSticky, setSticky] = useState(false);
   const [variant, setVariant] = useState(pageVariants);
-  const location = useLocation();
 
   // for dark mode
   useEffect(() => {
@@ -46,13 +58,20 @@ const App = () => {
     const nav = document.querySelector('nav');
     const stickyLogo = document.querySelector('.sticky-logo-cont');
     const logo = document.querySelector('.header-logo');
-    const sticky = document.querySelector('nav').offsetHeight;
+    const stickyHandler = (width) => {
+      setSticky(true);
+      logo.style.width = `${width}rem`;
+      stickyLogo.style.display = 'flex';
+      nav.classList.add('sticky');
+    };
+
+    if (location.pathname.includes('admin')) {
+      stickyHandler(3);
+    }
+
     const scrollCallBack = window.addEventListener('scroll', () => {
-      if (window.pageYOffset >= sticky) {
-        setSticky(true);
-        logo.style.width = '10rem';
-        stickyLogo.style.display = 'flex';
-        nav.classList.add('sticky');
+      if (window.pageYOffset >= nav.offsetHeight) {
+        stickyHandler(10);
       } else {
         setSticky(false);
         nav.classList.remove('sticky');
@@ -62,7 +81,7 @@ const App = () => {
     return () => {
       window.removeEventListener('scroll', scrollCallBack);
     };
-  }, [setSticky]);
+  }, [setSticky, location]);
 
   const updateMode = () => {
     darkMode
@@ -79,30 +98,17 @@ const App = () => {
         location={location}
       />
       <AnimatePresence>
-        <Switch location={location} key={location.pathname}>
+        <Switch location={location}>
           <Route exact path='/'>
             <Redirect to='/presentation_design' />
           </Route>
-          <Route path='/digital_art'>
-            <div className='page-wrap'>
-              <Project url='digital_art' pageVariants={variant} />
-            </div>
-          </Route>
-          <Route path='/print_design'>
-            <div className='page-wrap'>
-              <Project url='print_design' pageVariants={variant} />
-            </div>
-          </Route>
-          <Route path='/presentation_design'>
-            <div className='page-wrap'>
-              <Project url='presentation_design' pageVariants={variant} />
-            </div>
-          </Route>
-          <Route path='/ui_ux'>
-            <div className='page-wrap'>
-              <Project url='ui_ux' pageVariants={variant} />
-            </div>
-          </Route>
+          {projectPages.map((page, i) => (
+            <Route path={page} key={i}>
+              <div className='page-wrap'>
+                <Project url={page} pageVariants={variant} />
+              </div>
+            </Route>
+          ))}
           <Route path='/information'>
             <div className='page-wrap'>
               <Information
@@ -110,6 +116,16 @@ const App = () => {
                 pageStyle={pageStyle}
                 pageTransition={pageTransition}
               />
+            </div>
+          </Route>
+          {/* ADMIN ROUTING */}
+          <AdminRoute exact path='/admin' component={AdminPortal} />
+          <Route exact path='/admin/login'>
+            <div
+              className='page-wrap'
+              style={{ height: '100vh', justifyContent: 'center' }}
+            >
+              <Login />
             </div>
           </Route>
         </Switch>

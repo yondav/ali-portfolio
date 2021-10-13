@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
-import ProjectModal from '../project_modal';
+import React, { useState, Suspense } from 'react';
+// import ProjectModal from '../project_modal';
 import './thumbnail.css';
+
+const ProjectModal = React.lazy(() => import('../project_modal'));
 
 const Thumbnail = ({ data }) => {
   const [open, setOpen] = useState(false);
@@ -25,7 +27,9 @@ const Thumbnail = ({ data }) => {
           ))}
         </div>
       </div>
-      <ProjectModal handleClose={handleClose} open={open} data={data} />
+      <Suspense fallback=''>
+        <ProjectModal handleClose={handleClose} open={open} data={data} />
+      </Suspense>
     </>
   );
 };
