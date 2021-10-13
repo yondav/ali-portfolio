@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import useAPI from '../../../hooks/useAPI';
-import Thumbnail from '../../thumbnail';
-import { pageTransition, pageStyle } from '../../../utils/animationTransitions';
+import useAPI from '../../hooks/useAPI';
+import { pageTransition, pageStyle } from '../../utils/animationTransitions';
+import Thumbnail from '../thumbnail';
 
 const Project = ({ pageVariants, url }) => {
   const [isLoaded, setIsLoaded] = useState(false);

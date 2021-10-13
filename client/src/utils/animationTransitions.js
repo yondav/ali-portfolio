@@ -61,3 +61,13 @@ export const modalVariants = {
     scale: 1,
   },
 };
+
+export const headerLogos = {
+  initial: {
+    opacity: 0,
+    transform: 'scale(1.1)',
+  },
+  animate: {
+    transform: 'scale(1)',
+  },
+};

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
-import useAdminContext from '../../../hooks/useAdminContext';
-import Input from '../../input';
+import useAdminContext from '../../hooks/useAdminContext';
+import Input from '../../components/input';
 import './login.css';
 
 const Login = () => {

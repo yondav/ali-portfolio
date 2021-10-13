@@ -8,12 +8,12 @@ import { Switch, Route, useLocation, Redirect } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { debouncer } from './utils/debouncer';
 import Header from './components/header';
-import Project from './components/pages/project';
-import Information from './components/pages/information';
+import Project from './components/project';
+import Information from './pages/information';
 import Footer from './components/footer';
 import AdminRoute from './components/admin_route';
-import AdminPortal from './components/pages/admin_portal';
-import Login from './components/pages/login';
+import AdminPortal from './pages/admin_portal';
+import Login from './pages/login';
 import './App.css';
 
 const projectPages = [

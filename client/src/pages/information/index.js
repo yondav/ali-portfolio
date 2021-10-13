@@ -4,11 +4,11 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { BsArrowDown } from 'react-icons/bs';
-import useAPI from '../../../hooks/useAPI';
+import useAPI from '../../hooks/useAPI';
+import ContactModal from '../../components/contact_modal';
+import { logoFilter } from '../../components/logos';
+import resume from '../../assets/alison_lamb_cv_2021.pdf';
 import './information.css';
-import ContactModal from '../../contact_modal';
-import { logoFilter } from '../../logos';
-import resume from '../../../assets/alison_lamb_cv_2021.pdf';
 
 const Information = ({ pageVariants, pageStyle, pageTransition }) => {
   const [isLoaded, setIsLoaded] = useState(false);
